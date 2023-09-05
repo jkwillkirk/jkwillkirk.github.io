@@ -49,6 +49,11 @@
       padding: 5% 0;
     }
 
+    .profile-image {
+      max-width: 100%;
+      height: auto;
+    }
+
       .Futura-Bk-BT {
         font-family: 'Futura Bk BT', sans-serif;
         font-size: 1.1em;
@@ -93,77 +98,20 @@
 
     }
 
-
-    /* Added line style */
     .section-divider {
       margin-top: 3%; /* Increase margin */
       border-top: 0.2em solid #333333; /* Same color as text */
       padding-top: 1%; /* Add padding at the top */
     }
-    /* Rest of your custom styles */
-
-
-
- #popup1 h1 {
-    font-family: 'Futura XBlk BT', sans-serif;
-    margin-top:3%;
-  }
-
-    #popup1 p
-    {
-    font-family: 'Rockwell XBlk', serif;
-    margin-left: 0.7em;
-  }
-
-  #popup1 h2 {
-    font-family: 'Futura Bk BT', serif;
-    margin-left: 0.3em;
-  }
-
-
-
-    .qualification-button:hover {
-      background-color: #F49719; /* Secondary color on hover */
-      border-color: #F49719;
-    }
-
- .popup-container {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border: 0.1em solid #ccc;
-  padding: 2%;
-  width: 90vw;
-  height: 95vh;
-  max-width: none; /* To override max-width */
-  box-shadow: 0 10% 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Display on top */
-  overflow: auto; /* Add scroll bar when content exceeds height */
-  max-height: 95vh; /* Set a maximum height */
-}
-
-  /* Style for the close button */
-  .close-btn {
-  position: absolute;
-  top: 2%;
-  right: 2%;
-  cursor: pointer;
-  color: #F49719;
-  font-weight: bold;
-  font-size: 1.4em; /* Adjust the font size as needed */
-  font-family: 'Futura XBlk BT', sans-serif
-}
 
 .indented-text {
   margin-left: 0.7em;
 }
 
-  .active-link {
-    color: #F49719 !important; /* Orange color for active link */
-  }
+h2 {
+  font-weight: bold;
+}
+
 
   </style>
 </head>
@@ -201,172 +149,32 @@
           <h1 class="center-text mb-3">Current Hobbies</h1>
           <div class="row">
             <div class="col-md-4 mt-2 mb-3">
-              <h2 class = "Futura-Bk-BT">Projects</h2>
-              <p class = "Rockwell indented-text">During my free time I enjoy building and creating. At present, I am fully immersed in the process of enhancing my abilities, striving to take on even more expansive and valuable projects that can be used in real world senearios.<br><a id="openPopup1" class="custom-link extra-button" style="color: #F49719; ">Read More</a> </p></p>
-
-        <div id="popup1" class="popup-container">
-          <span id="closeBtn" class="close-btn">Close</span>
-          <h1>Projects Planned For 2023 And 2024</h1>
-
-  <h2><strong>Completed:</strong> Python Macros Calculator</h2>
-  <p>
-    <strong>Project Overview:</strong> My main objective is to design a comprehensive macro calculation system using Google Sheets. This involves creating a user-input form encompassing height, weight, age, and other relevant details. I'll process the gathered data through intricate mathematical formulas, resulting in precise calculations for required macronutrient quantities. This project aims to provide users with a convenient and accurate way to determine their personalised macronutrient needs, enhancing their dietary decision-making process.<br>
-    <strong>Form and Data Input:</strong> I'll begin by developing an intuitive user form within Google Sheets. Users will be prompted to input information such as height, weight, age, and related metrics, facilitating the accurate computation of their macronutrient requirements.<br>
-    <strong>Mathematical Formula Application:</strong> I'll meticulously integrate mathematical formulas into the Google Sheets system. These formulas will process the provided user data, enabling the system to derive accurate and tailored macronutrient intake recommendations.<br>
-    <strong>Precise Macronutrient Outputs:</strong> By leveraging the calculated values, my Google Sheets project will generate exact macronutrient measurements in line with individual needs. Users can access these figures to make informed dietary choices based on their requirements.<br>
-    <strong>  Have a look: </strong> <a href="https://colab.research.google.com/drive/1vh821ovZCSA6MYckOsgkt3G1sIPmcmZh?ouid=114141934161196215696&usp=drive_link" style="color: #F49719; ">Link</a>
-
-<h2><strong>Completed:</strong> Website Deployment with Amazon S3, and Responsive Design</h2>
-<p>
-  <strong>HTML and PDF/Text Popups:</strong> I will implement interactive elements using HTML, CSS, and JavaScript for the front end of my website. This includes creating PDF and text popups through client-side scripting. These components will engage users without requiring frequent modifications.<br>
-  <strong>Responsive Design:</strong> Prioritising user experience, my website will feature a responsive design. The layout and content will adapt seamlessly to various screen sizes and orientations by utilising CSS media queries, ensuring usability across different devices.<br>
-  <strong>Amazon S3 for Hosting Static Files:</strong> Amazon S3 will host the front end's static files (HTML, CSS, JavaScript, images). Its cost-effective and scalable storage solutions make it ideal for serving static content.<br>
-  <strong>Custom GoDaddy Domain Configuration:</strong> To enhance accessibility and branding, I will configure a custom domain using GoDaddy. This domain will point to the S3 bucket for static files.<br>
-  <strong>Secured Browsing with HTTPS:</strong> I'll enable HTTPS for my custom GoDaddy domain to ensure secure communication between my website and its visitors. This can be achieved by obtaining an SSL/TLS certificate. GoDaddy typically offers SSL certificates that can be purchased and configured for the domain. Depending on the hosting plan, there may also be access to free SSL certificates.<br>
-  <strong>Optimised Performance:</strong> To ensure optimal performance, I'll compress images, minimise CSS and JavaScript files, and implement browser caching within the front-end HTML code.<br>
-</p>
-
-
-  <h2><strong>Currently Doing:</strong> PowerShell Auditing System</h2>
-  <p>
-    <strong>Project Overview:</strong> I am currently working on developing a PowerShell logon script for computer audits. I'll be utilising WMI and registry queries to gather essential system information. Temporary text documents will be data backups, which I'll further process into a CSV template. The project will also involve integrating password vault APIs for secure data management.<br>
-    <strong>Data Collection and Temporary Text Documents:</strong> Using WMI queries, I'm collecting hardware and software specifics. My script will create temporary text documents crucial for offline PCs, ensuring audit data backup.<br>
-    <strong>CSV File Creation and API Integration:</strong> My script will streamline system attribute organisation by generating a CSV file from the collected data. Integrating password vault APIs like Bitwarden will ensure secure data storage and management.<br>
-    <strong>Execution Workflow:</strong> Upon user login, my logon script will activate, gathering necessary data, creating backups, generating CSV files, and securely uploading the data to password vaults using relevant APIs.
-  </p>
-
-  <h2><strong>Future Project:</strong> Bitwarden on AWS</h2>
-  <p>
-    <strong>Project Overview:</strong> In this project, I will install and self-host Bitwarden—an open-source password management solution—on the Amazon Web Services (AWS) platform. The installation will involve creating a new domain or subdomain using Amazon Route 53 for DNS management and integrating an email server, such as AWS WorkMail, to meet Bitwarden's requirements. Combining these components, I aim to establish a fully functional, secure, and user-friendly self-hosted Bitwarden instance.<br>
-    <strong>Defining Project Objectives:</strong> I will begin by clearly defining the project's objectives, which include setting up Bitwarden, creating a new domain or subdomain with DNS records using Amazon Route 53, and integrating an email server like AWS WorkMail for essential communication.<br>
-    <strong>Domain and DNS Setup:</strong> If needed, I will create a new domain or subdomain within Amazon Route 53 to serve as the web address for accessing the self-hosted Bitwarden instance. I will configure DNS records to point to the hosting environment.<br>
-    <strong>AWS WorkMail Configuration:</strong> To enable email functionality for Bitwarden, I will set up AWS WorkMail, which will serve as the mail server. This involves creating email addresses and aliases for account-related notifications and communication.<br>
-    <strong>Amazon EC2 Instance Provisioning:</strong> I will provision an Amazon EC2 instance that meets the Bitwarden installation requirements. This instance will host the Bitwarden application and be accessible via the domain or subdomain created earlier.<br>
-    <strong>Bitwarden Installation and Configuration:</strong> Following Bitwarden's installation instructions, I will deploy the application on the EC2 instance. This includes configuring the environment variables, database connections, and security settings.<br>
-    <strong>A exapmle: </strong> <a href="https://www.linuxtek.ca/2023/01/03/self-hosting-bitwarden-on-aws/" style="color: #F49719; ">link</a>
-  </p>
-
-  <h2><strong>Future Project:</strong> AWS Mail System</h2>
-  <p>
-    <strong>Defining Project Scope:</strong> I will begin by outlining this project's specific requirements and objectives, including the desired level of anonymity and the number of aliases needed.<br>
-    <strong>AWS Account Setup:</strong> I will establish an AWS account and configure the necessary settings to enable the deployment of AWS WorkMail services.<br>
-    <strong>Configuring Email Domain:</strong> Following AWS's guidelines, I will set up my email domain within AWS WorkMail, ensuring that the domain is verified correctly and configured.<br>
-    <strong>Creating Email Aliases:</strong> I will generate a set of email aliases that will serve as intermediaries between senders and my email address. These aliases will be utilised for different purposes to compartmentalise communications.<br>
-    <strong>Mapping Aliases to Actual Email:</strong> I will configure AWS WorkMail to forward emails received on these aliases to my actual email address. This step involves ensuring seamless email forwarding.<br>
-    <strong>Testing Communication Channels:</strong> To guarantee the setup's effectiveness, I will rigorously test the communication channels by emailing the aliases and assessing their successful delivery to my inbox.<br>
-    <strong>Monitoring and Quality Assurance:</strong> I will implement monitoring mechanisms to track the performance of the email forwarding setup. Regular checks will be conducted to ensure the system's reliability.<br>
-    <strong>Enhancing Security Measures:</strong> I will explore AWS WorkMail's security features and adopt best practices to safeguard my email communications and data from potential threats.
-    <strong>A exapmle: </strong> <a href="https://dev.to/kevin_odongo35/how-to-start-with-aws-workmail-gn7" style="color: #F49719; ">Link</a>
-  </p>
-
-  <h2><strong>Setting Up:</strong> AWS Phone System</h2>
-  <p>
-    <strong>Project Overview:</strong> I will build a 3CX phone system on Amazon Web Services (AWS) to fulfil my communication needs with a small group of fewer than ten users. By harnessing the power of AWS's infrastructure and utilising the features of the 3CX software, my goal is to establish a customised phone system tailored to my specific requirements.<br>
-    <strong>Setting Up the Infrastructure:</strong> I will create an AWS account and select the correct Amazon EC2 instance that suits the scale of my phone system.<br>
-    <strong>Installing 3CX Software:</strong> Following the instructions, I will install the 3CX software onto the EC2 instance I've set up.<br>
-    <strong>Customising the Configuration:</strong> I will personalise extensions for each user involved in this personal project.
-    <br>
-    <strong>A exapmle: </strong> <a href="https://www.youtube.com/watch?v=n_1wX7kKx7k" style="color: #F49719; ">Link</a>
-
-  </p>
-
-  <h2><strong>Future Project:</strong> Automatic Driver Updates Through Command Line</h2>
-  <p>
-    <strong>Project Overview:</strong> The heart of this project will involve harnessing Group Policy and PowerShell to facilitate the effortless distribution of an automated driver update tool. This endeavour will commence by configuring Group Policy, a powerful asset for managing Windows environments. By utilising Group Policy, the project will automate the distribution of the driver update tool to selected systems, ensuring a cohesive network.<br>
-    <strong>Registry Key Modification:</strong> As part of the strategy for enhanced automation, the project will include modifying registry keys through Group Policy. I will lay the groundwork for subsequent scripting and automation processes by configuring specific registry entries.<br>
-    <strong>Integration of PowerShell Script:</strong> A meticulously crafted PowerShell script will be an integral part of the project. This script will seamlessly integrate with the modified registry keys, allowing for streamlined command-line interaction with targeted systems and paving the way for advanced automation.<br>
-    <strong>Scheduled Script Execution:</strong> The approach will involve scheduling the execution of the PowerShell script. Through task scheduling mechanisms, the script will run at predetermined intervals, ensuring consistent and timely management of driver updates.<br>
-    <strong>Utilising the Driver Update Tool:</strong> The project's essence will revolve around deploying the driver update tool through PowerShell scripting. Tailored to the manufacturer's specifications, this tool will enable the automated download of essential drivers for supported hardware.<br>
-    <strong>Considering Graphics Card Updates:</strong> Acknowledging the unique intricacies of graphics card driver updates, my approach will be cautious. Graphics card drivers often necessitate meticulous handling due to potential compatibility concerns and specific configurations.<br>
-    <strong>Manual Oversight for Graphics Cards:</strong> In recognition of these potential complexities, my project will emphasise the significance of manual oversight when dealing with graphics card driver updates. This approach aims to preempt compatibility conflicts and ensure the stability of systems.<br>
-    <strong>A exapmle for Lenovo: </strong> <a href="https://jantari.github.io/LSUClient-docs/docs/topics/examples/" style="color: #F49719; ">Link</a>
-    <br>
-    <strong>A exapmle for HP and Dell: </strong> <a href="https://andrewstaylor.com/2021/09/17/automatic-driver-updating-for-dell-and-hp-machines/" style="color: #F49719; ">Link</a>
-  </p>
-
-  <h2><strong>Future Project:</strong> Winget package manager</h2>
-  <p>
-    <strong>Project Overview:</strong> In this project, I will set up the winget-cli-restsource repository—an initiative by Microsoft designed to offer a model implementation for establishing a REST-based package source dedicated to the winget client—within an Amazon Web Services (AWS) environment. By harnessing the capabilities of AWS and adhering to the principles outlined by Microsoft's project, my objective is to create a functional and efficient package source that seamlessly integrates with the Winget client.<br>
-    <strong>Selecting Infrastructure Components:</strong> I will assess the specific requirements of the winget-cli-restsource repository and select the appropriate AWS services, such as Amazon EC2 instances, Amazon S3 for storage, and potentially Amazon RDS for database needs.<br>
-    <strong>Creating EC2 Instance:</strong> Following AWS guidelines, I will launch an Amazon EC2 instance with the specifications to host the winget-cli-restsource repository's back-end application.<br>
-    <strong>Repository Deployment:</strong> I will clone the winget-cli-restsource repository from its source and configure the back-end application on the EC2 instance. This will involve installing dependencies, setting up API endpoints, and configuring the REST-based package source.<br>
-    <strong>Securing the Repository:</strong> I will implement security measures, such as configuring security groups, utilising AWS Identity and Access Management (IAM) roles, and enabling encryption to protect the repository and its data.<br>
-    <strong>Integrating with Amazon S3:</strong> For storing package metadata and binaries, I will create an Amazon S3 bucket and configure the repository to interact with it. This step includes setting up proper permissions and access controls.<br>
-    <strong>Testing and Validation:</strong> I will thoroughly test the functionality of the winget-cli-restsource repository by simulating package queries and installations using the widget client. Any issues or discrepancies will be addressed and resolved.<br>
-    <strong>A example: </strong> <a href="https://github.com/microsoft/winget-cli-restsource?WT.mc_id=modinfra-34210-thmaure" style="color: #F49719; ">Link</a>
-  </p>
-        </div>
+              <h2 class = "Futura-Bk-BT">Swimming</h2>
+              <p class = "Rockwell indented-text">Last year, I learned to swim, and this year, my goal was to swim 60 laps in 45 minutes. This journey improved my fitness and instilled valuable qualities like perseverance, discipline, and strategic planning. These skills directly apply to the technology sector, where I'm ready to tackle complex problems with unwavering determination, just as I did in achieving my swimming goal. This experience has prepared me to embrace challenges and adapt effectively, ensuring my personal and professional success.</p>
             </div>
             <div class="col-md-4 mt-2 mb-3">
-              <h2 class = "Futura-Bk-BT">Swimming</h2>
-              <p class = "Rockwell indented-text">Having learned to swim last year, I now engage in swimming twice a week. Additionally, I complement my routine with gym training to enhance my body's endurance. My aim is to achieve the target of completing 60 lengths within 45 minutes.
-            <br> <a id="openPopup2" class="custom-link extra-button" style="color: #F49719; ">Read More</a> </p>
-        <div id="popup2" class="popup-container">
-          <span id="closeBtn" class="close-btn">Close</span>
-          <h1>Swimming</h1>
-          <p class = "Rockwell"><span class = "Futura-Bk-BT">Over the past year, engaging in the swimming hobby has brought me physical fitness and a sense of accomplishment and has also imparted valuable life lessons.</span> Through consistent practice, I have gained a deep understanding of perseverance, discipline, and strategic planning. Learning to swim required overcoming initial challenges, and the journey was marked by frustration and fatigue. However, I remained resolute in my commitment, consistently showing up at the pool twice a week and supplementing my routine with dedicated gym sessions to build endurance.</p>
-          <br>
-          <p class = "Rockwell"><span class = "Futura-Bk-BT">The dedication and perseverance I cultivated during this process have taught me that success often hinges on pushing through difficulties and maintaining a solid work ethic.</span> This lesson is directly transferable to the technology sector, where projects can be complex and demanding. Just as I navigated the initial struggles of swimming to eventually achieve my goal of completing 60 lengths within 45 minutes, I can bring the same determination to tackling intricate technical problems or learning new programming languages.</p>
-          <br>
-          <p class = "Rockwell"><span class = "Futura-Bk-BT">Moreover, my swimming journey has highlighted the importance of discipline in achieving long-term objectives.</span> The consistent training regimen I established reflects the need for structured approaches in any domain. Creating and sticking to well-thought-out plans is invaluable in the technology sector, where innovation and efficiency are paramount. Whether managing project timelines, adhering to coding standards, or implementing rigorous testing procedures, the discipline acquired through my swimming routine can be seamlessly applied to ensure optimal outcomes in technological undertakings.</p>
-          <br>
-          <p class = "Rockwell"><span class = "Futura-Bk-BT">Strategic planning, another skill refined through my swimming journey, has proven vital both in and out of the water.</span> As I devised a step-by-step strategy to improve my swimming speed and technique gradually, I honed the ability to break down complex goals into manageable tasks. This strategy-first mindset is directly translatable to the technology field, where designing comprehensive project roadmaps and anticipating potential challenges can significantly enhance project success.</p>
-
-          <p class = "Rockwell"><span class = "Futura-Bk-BT">In conclusion, my dedication to swimming has taught me invaluable qualities like perseverance, discipline, and strategic planning.</span> These attributes undoubtedly carry over to the technology sector, where they can contribute to overcoming challenges, driving innovation, and achieving exceptional results. Just as I strive to conquer the pool, I'm excited to bring the same determination and skills to the dynamic and ever-evolving landscape of technology.</p>
-        </div>
-
+              <h2 class = "Futura-Bk-BT">Projects</h2>
+              <p class = "Rockwell indented-text">During my free time I enjoy building and creating. At present, I am fully immersed in the process of enhancing my abilities, striving to take on even more expansive and valuable projects that can be used in real-world scenarios.<br/><a href="PDF/Qualifications/Religous Studies/Paper_One.PDF" target="_blank" class="custom-link pdfLink" style="color: #F49719; ">Read More</a></p>
             </div>
             <div class="col-md-4 mt-2 mb-3">
               <h2 class = "Futura-Bk-BT">Curious Exploration</h2>
-              <p class = "Rockwell indented-text">One of the most relaxing pastimes I delight in is enriching my understanding of various subjects like philosophy, physics, metaphysics, history, and spirituality/religion. I pursue this through diverse mediums such as books, movies, and YouTube.<br><a id="openPopup3" class="custom-link extra-button" style="color: #F49719; ">Read More</a> </p>
-                      
-        <div id="popup3" class="popup-container">
-          <span id="closeBtn" class="close-btn">Close</span>
-          <h2>Curious Exploration</h2>
-          <p class = "Rockwell"><span class = "Futura-Bk-BT">I enjoy exploring philosophy, physics, metaphysics, history, and spirituality through books, movies, and YouTube. </span>This has equipped me with skills directly applicable to the technology sector. This pursuit has nurtured my critical thinking, adaptability, holistic problem-solving abilities, and a unique capability: accepting diverse viewpoints.</p>
-          <br>
-          <p class = "Rockwell"><span class = "Futura-Bk-BT">Engaging with various subjects has fostered an openness to different perspectives and viewpoints. </span>In delving into philosophy, I've encountered diverse schools of thought; through historical studies, I've grasped the influence of varied narratives. This exposure has enriched my understanding and cultivated empathy and the ability to approach challenges more comprehensively. </p>
-          <br>
-          <p class = "Rockwell"><span class = "Futura-Bk-BT"> </span> </p>
-          <br>
-          <p class = "Rockwell"><span class = "Futura-Bk-BT"> </span> </p>
-
-          <p class = "Rockwell"><span class = "Futura-Bk-BT"> </span> </p>
-        </div>
+              <p class = "Rockwell indented-text">I enjoy delving into the world's intricacies, exploring philosophy, physics, metaphysics, history, and spirituality through various mediums, including books, movies, and YouTube videos. This curious exploration has honed my critical thinking, adaptability, holistic problem-solving abilities, and the unique skill of accepting diverse viewpoints. These qualities are invaluable in the technology sector, fostering effective communication, teamwork, and innovative solutions that cater to a broad spectrum of user needs.</p>
             </div>
           </div>
           <div class="section-divider"></div>
           <h1 class="center-text mt-2 pb-3 mb-3">Past Hobbies</h1>
           <div class="row">
             <div class="col-md-4 mt-2 mb-3">
-              <h2 class = "Futura-Bk-BT">Martial Arts</h2>
-              <p class = "Rockwell indented-text">I have a history of engaging in martial arts 3 disciplines I participated in for example are: Taekwondo, Brazilian jiu-jitsu, and Fencing.<br><!-- <a id="openPopup4" class="custom-link extra-button" style="color: #F49719; ">Read More</a> </p>
-                      Popup container -->
-        <div id="popup4" class="popup-container">
-          <span id="closeBtn" class="close-btn">Close</span>
-          <h2>Hobbie Name</h2>
-          <p>Desctription</p>
-        </div>
+              <h2 class = "Futura-Bk-BT">The Mill Adventure Base</h2>
+              <p class = "Rockwell indented-text">Through an adventure club at my local reservoir, I engaged in challenging activities like kayaking, caving, bouldering, orienteering, and rock climbing. These experiences have honed adaptability, precision, resilience, spatial awareness, strategic thinking, and teamwork, making me a versatile candidate for various professional roles, including IT support, where these qualities are invaluable.</p>
             </div>
             <div class="col-md-4 mt-2 mb-3">
-              <h2 class = "Futura-Bk-BT">The Mill Adventure Base</h2>
-              <p class = "Rockwell indented-text">Through an adventure club at my local reservoir, I engaged in challenging activities such as kayaking, caving, bouldering, orienteering, and rock climbing. <br> <!--<a id="openPopup5" class="custom-link extra-button" style="color: #F49719; ">Read More</a> </p> 
-                       Popup container -->
-        <div id="popup5" class="popup-container">
-          <span id="closeBtn" class="close-btn">Close</span>
-          <h2>Hobbie Name</h2>
-          <p>Desctription</p>
-        </div>
+              <h2 class = "Futura-Bk-BT">Martial Arts</h2>
+              <p class = "Rockwell indented-text">I have a history of engaging in martial arts, including disciplines like Taekwondo, Brazilian jiu-jitsu, and Fencing. Taekwondo taught me the art of maintaining balance and control, skills transferable to IT support where equilibrium in complex tasks is vital. Fencing honed my strategic thinking, a quality essential for planning project milestones and navigating complex issues effectively in a professional IT setting.</p>
             </div>
             <div class="col-md-4 mt-2 mb-3">
               <h2 class = "Futura-Bk-BT">Combined Cadet Force</h2>
-              <p class = "Rockwell indented-text">My school hosted an after-school combined cadet force, which is a extracurricular program that teaches leadership skills, teamwork, and discipline. <br><!--<a id="openPopup6" class="custom-link extra-button" style="color: #F49719; ">Read More</a> </p> 
-                     Popup container -->
-        <div id="popup1" class="popup-container">
-          <span id="closeBtn" class="close-btn">Close</span>
-          <h2>Hobbie Name</h2>
-          <p>Desctription</p>
-        </div>
+              <p class = "Rockwell indented-text">My school hosted an after-school combined cadet force, an extracurricular program that taught leadership skills, teamwork, and discipline. Through the program, I developed confidence in guiding others, effectively communicating goals, and motivating colleagues to achieve common objectives. These skills seamlessly translate into professional settings, enhancing teamwork, innovation, and efficiency.</p>
             </div>
           </div>
         </div>
@@ -374,8 +182,6 @@
     </div>
   </div>
 </div>
-
-
 <footer class="footer py-3">
   <div class="container-fluid">
     <div class="row">
@@ -389,27 +195,20 @@
     </div>
   </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  const pdfLinks = document.querySelectorAll('.pdfLink');
+        
+        pdfLinks.forEach(pdfLink => {
+            pdfLink.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent the default link behavior
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script>
-  const openPopupButtons = document.querySelectorAll('.qualification-button, .extra-button');
-const closePopupButtons = document.querySelectorAll('.close-btn');
-const popups = document.querySelectorAll('.popup-container');
-
-openPopupButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    popups[index].style.display = 'block';
-  });
-});
-
-closePopupButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    popups[index].style.display = 'none';
-  });
-});
+                const pdfUrl = pdfLink.getAttribute('href');
+                window.open(pdfUrl, '_blank');
+            });
+        });
 </script>
 </body>
 </html>
