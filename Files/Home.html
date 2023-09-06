@@ -3,8 +3,6 @@
 <head>
    <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Include Google Fonts for Futura and Rockwell -->
-  <link href="https://fonts.googleapis.com/css2?family=Futura:wght@400;700&family=Rockwell&display=swap" rel="stylesheet">
   <!-- Include Font Awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Include Bootstrap CSS -->
@@ -55,19 +53,38 @@
     .intro {
       max-width: 65%;
     }
+/* Define the @font-face for Futura XBlk BT */
+@font-face {
+  font-family: 'Futura XBlk BT';
+  src: url('https://fonts.googleapis.com/css2?family=Futura+XBlk+BT');
+}
 
-      .Futura-Bk-BT {
-        font-family: 'Futura Bk BT', sans-serif;
-        font-size: 1.1em;
-      }
+/* Apply Futura XBlk BT font to elements */
+.Futura-XBlk-BT {
+  font-family: 'Futura XBlk BT', sans-serif;
+}
 
-      .Rockwell {
-        font-family: 'Rockwell XBlk', serif;
-      }
+/* Define the @font-face for Futura Bk BT */
+@font-face {
+  font-family: 'Futura Bk BT';
+  src: url('https://fonts.googleapis.com/css2?family=Futura+Bk+BT');
+}
 
-      .Futura-XBlk-BT{
-        font-family: 'Futura XBlk BT', sans-serif;
-      }
+/* Apply Futura Bk BT font to elements */
+.Futura-Bk-BT {
+  font-family: 'Futura Bk BT', sans-serif;
+}
+
+/* Define the @font-face for Rockwell Regular */
+@font-face {
+  font-family: 'Rockwell XBlk';
+  src: url('https://fonts.googleapis.com/css2?family=Rockwell');
+}
+
+/* Apply Rockwell Regular font to elements */
+.Rockwell {
+  font-family: 'Rockwell Regular', serif;
+}
 
 
     .qualification-button {
