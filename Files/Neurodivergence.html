@@ -42,11 +42,9 @@
   background-color: #00376B;
   color: white;
   text-align: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   padding: 1rem 0;
-  height: 2.5rem;   
+  flex-shrink: 0; /* Prevent the footer from shrinking */
     }
     .footer a {
       color: white;
@@ -172,11 +170,10 @@ h2 {
         }
 
         main {
-    flex-grow: 1;
-  min-height: calc(100vh - 10vh); /* Set a minimum height to fill the available space, subtracting the footer height */
-  margin-bottom: 10vh; /* Add margin to ensure space for the footer */
-  display: flex;
+    display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 10vh);
+  margin-bottom: 10vh;
            
         }
 
