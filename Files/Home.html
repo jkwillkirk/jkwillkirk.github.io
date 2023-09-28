@@ -36,9 +36,14 @@
     }
     .footer {
       background-color: #00376B;
-      color: white;
-      text-align: center;
-      margin-top: auto;
+  color: white;
+  text-align: center;
+  /* Remove the margin-top: auto; property */
+  margin-top: auto; /* Remove this line */
+  padding: 1rem 0; /* Adjust padding as needed */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
     }
     .footer a {
       color: white;
@@ -153,7 +158,7 @@
   .active-link {
     color: #F49719 !important; /* Orange color for active link */
   }
-        html, body, main {
+        html, body {
             height: 100%;
         }
 
@@ -163,8 +168,11 @@
         }
 
         main {
-            flex-grow: 1; /* This will make the main content area grow to fill the available space */
-           margin-bottom: 10vh;
+              flex-grow: 1;
+  min-height: 100%; /* Set a minimum height to fill the available space */
+  margin-bottom: 10vh;
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack child elements vertically */
         }
   </style>
 </head>
