@@ -171,8 +171,9 @@ h2 {
         }
 
         main {
-   min-height: 100%;
-  margin-bottom: 10vh;
+    flex-grow: 1;
+  min-height: calc(100vh - 10vh); /* Set a minimum height to fill the available space, subtracting the footer height */
+  margin-bottom: 10vh; /* Add margin to ensure space for the footer */
   display: flex;
   flex-direction: column;
            
