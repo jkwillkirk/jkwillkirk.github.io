@@ -166,15 +166,15 @@ h2 {
 
         body {
             display: flex;
-            flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh; /* Use min-height instead of height */
         }
 
         main {
-  flex-grow: 1;
-  min-height: 100%; /* Set a minimum height to fill the available space */
+   min-height: 100%;
   margin-bottom: 10vh;
-  display: flex; /* Make it a flex container */
-  flex-direction: column; /* Stack child elements vertically */
+  display: flex;
+  flex-direction: column;
            
         }
   </style>
