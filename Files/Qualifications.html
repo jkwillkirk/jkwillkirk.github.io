@@ -37,10 +37,13 @@
       font-family: 'Futura XBlk BT', sans-serif;
     }
     .footer {
-      background-color: #00376B;
-      color: white;
-      text-align: center;
-      margin-top: auto;
+  background-color: #00376B;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
     }
     .footer a {
       color: white;
@@ -267,7 +270,7 @@
   text-align: left;
 }
 
-        html, body, main {
+        html, body {
             height: 100%;
         }
 
@@ -277,8 +280,11 @@
         }
 
         main {
-           flex-grow: 1; /* This will make the main content area grow to fill the available space */
-           margin-bottom: 10vh;
+            flex-grow: 1;
+  min-height: 100%; /* Set a minimum height to fill the available space */
+  margin-bottom: 10vh;
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack child elements vertically */
         }
   </style>
 </head>
