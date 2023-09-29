@@ -199,12 +199,11 @@ h2 {
         }
 
         main {
-   display: flex;
-  justify-content: left; /* Center buttons horizontally */
-  margin-top: 2%;
-  margin-bottom: 2%;
-  gap: 0.5em; /* Add separation between buttons */
-  text-align: left;
+   flex-grow: 1;
+  min-height: 100%; /* Set a minimum height to fill the available space */
+  margin-bottom: 10vh;
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack child elements vertically */
         }
   </style>
 </head>
