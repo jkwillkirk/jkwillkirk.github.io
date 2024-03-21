@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Qualifications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    
+    /* Custom styles */
+    .navbar {
+      background-color: #00376B;
+      padding: 0.2em;
+    }
+    .navbar-toggler {
+      background-color: #F49719;
+      border: none;
+      padding: 0.2em 0.5em;
+      font-family: 'Rockwell XBlk', serif;
+    }
+    .navbar-toggler-icon {
+      background-color: #F49719;
+    }
+    .navbar-light .navbar-nav .nav-link {
+      color: white;
+      padding: 0.5em 1em;
+      font-family: 'Rockwell XBlk', serif;
+    }
+    .navbar-light .navbar-nav .nav-item.active .nav-link {
+      color: #F49719;
+    }
+    .navbar-brand {
+      font-size: 1.8em;
+      padding: 0.2em 0.5em;
+      font-family: 'Futura XBlk BT', sans-serif;
+    }
+    .footer {
+      background-color: #00376B;
+      color: white;
+      text-align: center;
+    }
+    .footer a {
+      color: white;
+    }
+
+    .profile-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5% 0;
+    }
+
+    .intro {
+      max-width: 65%;
+    }
+
+    .profile-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+/* Define the @font-face for Futura XBlk BT */
+@font-face {
+  font-family: 'Futura XBlk BT';
+  src: url('ufonts.com_futura-xblk-bt-extra-black.ttf') format('truetype');
+}
+
+/* Apply Futura XBlk BT font to elements */
+.Futura-XBlk-BT {
+  font-family: 'Futura XBlk BT', sans-serif;
+}
+
+.Futura-XBlk-BT1 {
+  font-family: 'Futura XBlk BT', sans-serif;
+  font-size: 1.1em;
+}
+
+/* Define the @font-face for Futura Bk BT */
+@font-face {
+  font-family: 'Futura Bk BT';
+  src: url('ufonts.com_a-futuraorto.ttf') format('truetype');
+}
+
+/* Apply Futura Bk BT font to elements */
+.Futura-Bk-BT {
+  font-family: 'Futura Bk BT', sans-serif;
+}
+
+/* Define the @font-face for Rockwell Regular */
+@font-face {
+  font-family: 'Rockwell XBlk';
+  src: url('ufonts.com_mrockwell-light-opentype.otf') format('opentype');
+}
+
+/* Apply Rockwell Regular font to elements */
+.Rockwell {
+  font-family: 'Rockwell Regular', serif;
+}
+
+ #popup1 h2,
+  #popup2 h2,
+  #popup3 h2,
+  #popup4 h2,
+  #popup5 h2,
+  #popup6 h2,
+  #popup7 h2,
+  #popup8 h2,
+  #popup9 h2,
+  #popup10 h2,
+  #popup11 h2,
+  #popup12 h2 {
+    font-family: 'Futura XBlk BT', sans-serif;
+    margin-top:3%;
+  }
+
+    #popup1 p,
+  #popup2 p,
+  #popup3 p,
+  #popup4 p,
+  #popup5 p,
+  #popup6 p,
+  #popup7 p,
+  #popup8 p,
+  #popup9 p,
+  #popup10 p,
+  #popup11 p,
+  #popup12 p {
+    font-family: 'Rockwell XBlk', serif;
+    margin-left: 0.7em;
+  }
+
+  #popup1 h3,
+  #popup2 h3,
+  #popup3 h3,
+  #popup4 h3,
+  #popup5 h3,
+  #popup6 h3,
+  #popup7 h3,
+  #popup8 h3,
+  #popup9 h3,
+  #popup10 h3,
+  #popup11 h3,
+  #popup12 h3 {
+    font-family: 'Futura Bk BT', serif;
+    margin-left: 0.3em;
+  }
+
+    .qualification-button:hover {
+      background-color: #F49719; /* Secondary color on hover */
+      border-color: #F49719;
+    }
+
+      /* Style for the popup container */
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 0.1em solid #ccc;
+  padding: 2%;
+  width: 85vw;
+  height: 95vh;
+  max-width: none; /* To override max-width */
+  box-shadow: 0 10% 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Display on top */
+  overflow: auto; /* Add scroll bar when content exceeds height */
+  max-height: 95vh; /* Set a maximum height */
+}
+
+  .close-btn {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  color: #F49719;
+  font-weight: bold;
+  font-size: 1.4em; /* Adjust the font size as needed */
+  font-family: 'Futura XBlk BT', sans-serif
+}
+  .fishy-popup-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      width: 90vw;
+      height: 95vh;
+      background-color: white;
+      border: 0.1em solid #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      padding: 0.2%;
+      overflow: auto;
+    }
+    
+  .fishy-close-button {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  color: #F49719;
+  font-weight: bold;
+  font-size: 1.4em;
+  font-family: 'Futura XBlk BT', sans-serif
+    }
+
+  .small-text {
+    font-size: 90%;
+    font-family: 'Rockwell', serif;
+    }
+
+  .custom-link {
+    color: #00376B;
+    font-weight: normal;
+    text-decoration: none; /* To remove underlines, adjust as needed */
+    margin-right: 0.5%; /* Add spacing between the links */
+  }
+
+.indented-text {
+  margin-left: 0.7em;
+}
+
+  .active-link {
+    color: #F49719 !important; /* Orange color for active link */
+  }
+
+    .button-group {
+      display: flex;
+      justify-content: center; /* Center buttons horizontally */
+      gap: 0.5em; /* Add separation between buttons */
+      text-align: center;
+}
+
+    .button-group-left {
+      display: flex;
+      justify-content: left; /* Center buttons horizontally */
+      gap: 0.5em; /* Add separation between buttons */
+      text-align: left;
+}
+
+    .Button {
+      margin-top: 2%;
+      background-color: #F49719; /* Accent color */
+      border-color: #F49719;
+      color: white;
+      font-family: 'Futura Bk BT', sans-serif;
+    }
+
+    .Button:hover {
+  background-color: #00376B; /* Secondary color on hover */
+  border-color: #00376B;
+  color: white;
+}
+
+.button-group1 {
+  display: flex;
+  justify-content: left; /* Center buttons horizontally */
+  margin-top: 2%;
+  margin-bottom: 2%;
+  gap: 0.5em; /* Add separation between buttons */
+  text-align: left;
+}
+
+  </style>
+</head>
+<body>
+<main>
+   
+<nav class="navbar navbar-expand-md navbar-light">
+  <span class="navbar-brand text-white">Jak . Kirland</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="text-white">Menu</span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="Home.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link  active-link" href="Qualifications.html">Qualifications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Hobbies.html">Hobbies</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Expereience.html">Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Neurodivergence.html">My Neurodivergence</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <div class="container align-items-center mb-1 mt-4">
+    <div class="row">
+      <div class="col-md">
+        <h1 class="Futura-Bk-BT">West Notts College</h1>
+        <span>
+          <p class="font-weight-bold Rockwell indented-text"> Click the qualification for more info</p>
+        <button id="openPopup1 Rockwell" class="btn qualification-button text-left Rockwell"><h6>Level 3 Cambridge Extended Technical Diploma in digital technician</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup1" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2>Level 3 - Cambridge Extended Technical Diploma in digital technician</h2>
+          <h3>Duration: </h3>
+          <p>2020 - 2021</p>
+          <h3>Grade Achieved:</h3>
+          <p>Distinction-Merit-Merit</p>
+          <h3>Overview:</h3>
+          <p>Undertaking the OCR Level 3 Cambridge Technical Extended Diploma in IT has been an enriching experience that has significantly expanded my knowledge and skills. Throughout the course, I've developed a solid theoretical grasp and honed my practical understanding, equipping me to navigate the intricate interplay of IT transformations and security considerations. The diverse and hands-on nature of the curriculum has provided me with a robust alternative to traditional A Levels, ensuring my readiness to excel both in the workplace and beyond.</p>
+          <h3>Modules Included:</h3>
+          <div class="button-group">
+              <button href="PDF/Qualifications/Level 3 Year 2/Cyber_Security.pdf" target="_blank" class="Rockwell pdfLink Button">Cyber Security</button>
+            <button href="PDF/Qualifications/Level 3 Year 2/Cognitive_Computing.pdf" target="_blank" class="Rockwell pdfLink Button">Cognitive Computing</button>
+            <button href="PDF/Qualifications/Level 3 Year 2/Cloud_Technolgy.pdf" target="_blank" class="Rockwell pdfLink Button">Cloud Technolgy</button>
+            <button href="PDF/Qualifications/Level 3 Year 2/Developing_A_Smarter_Planet.pdf" target="_blank" class="Rockwell pdfLink Button">Developing A Smarter Planet</a>
+            <button href="PDF/Qualifications/Level 3 Year 2/It_Technical_Support.pdf" target="_blank" class="Rockwell pdfLink Button">IT Technical Support</button>
+          </div>
+          <br>
+          <div class="button-group">
+          <button href="PDF/Qualifications/Level 3 Year 2/Product Development.pdf" target="_blank" class="Rockwell pdfLink Button">Product Development</button>
+            <button href="PDF/Qualifications/Level 3 Year 2/Project_Management.pdf" target="_blank" class="Rockwell pdfLink Button">Project Management</button>
+            <button href="PDF/Qualifications/Level 3 Year 2/Virtual_And_Augmented_Reality.pdf" target="_blank" class="Rockwell pdfLink Button">Virtual And Augmented Reality</button>
+            <button href="PDF/Qualifications/Level 3 Year 2/Mobile_Technology.pdf" target="_blank" class="Rockwell pdfLink Button">Mobile Technology</button>
+          </div>
+        </div>
+
+        <button id="openPopup2" class="btn text-left qualification-button Rockwell"><h6>Level 3 - Cambridge Technical Diploma in IT</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup2" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2 class = "Futura-XBlk-BT">Level 3 Cambridge Technical Diploma in IT</h2>
+          <h3>Duration: </h3>
+          <p>Duration: 2019 - 2020</p>
+          <h3>Grade Achieved:</h3>
+          <p>Distinction-Merit</p>
+          <h3>Overview:</h3>
+          <p>The OCR Level 3 Cambridge Technical Diploma in IT has given me valuable knowledge and skills in IT and cybersecurity. This vocational qualification offers a variety of units and practical tasks that contribute to a comprehensive understanding of technological advancements. This comprises one-half of my extended diploma.</p>
+          <h3>Modules Included:</h3>
+          <div class="button-group">
+              <button href="PDF/Qualifications/Level 3 Year 1/Computer_Networks.pdf" target="_blank" class="Rockwell pdfLink Button">Computer Networks</button>
+            <button href="PDF/Qualifications/Level 3 Year 1/Computer_Systems-Hardware.pdf" target="_blank" class="Rockwell pdfLink Button">Computer Systems (Hardware)</button>
+            <button href="PDF/Qualifications/Level 3 Year 1/Computer_Systems-Software.pdf" target="_blank" class="Rockwell pdfLink Button">Computer Systems (Software)</button>
+            <button href="PDF/Qualifications/Level 3 Year 1/Enterpise_Computing.pdf" target="_blank" class="Rockwell pdfLink Button">Enterpise Computing</a>
+          </div>
+          <br>
+          <div class="button-group">
+          <button href="PDF/Qualifications/Level 3 Year 1/Fundamentals_Of_IT.pdf" target="_blank" class="Rockwell pdfLink Button">Fundamentals Of IT</button>
+            <button href="PDF/Qualifications/Level 3 Year 1/Global_Information.pdf" target="_blank" class="Rockwell pdfLink Button">Global Information</button>
+            <button href="PDF/Qualifications/Level 3 Year 1/Internet_Of_Everything.pdf" target="_blank" class="Rockwell pdfLink Button">Internet Of Everything</button>
+            <button href="PDF/Qualifications/Level 3 Year 1/Systems_Analysis_And_Design.pdf" target="_blank" class="Rockwell pdfLink Button">Systems Analysis And Design</a>
+          </div>
+        </div>
+
+
+        <button id="openPopup3" class="btn text-left qualification-button Rockwell"><h6>Level 2 - Cambridge Technical Diploma in IT</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup3" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2>Level 2 Cambridge Technical Diploma in IT</h2>
+          <h3>Duration: </h3>
+          <p>2018 - 2019</p>
+          <h3>Grade Achieved:</h3>
+          <p>Merit</p>
+          <h3>Overview:</h3>
+          <p>Completing the OCR Level 2 Cambridge Technical Diploma in IT has equipped me with the foundational knowledge and skills to navigate the intricate realms of IT and cybersecurity. I've delved deeper into complex concepts and advanced practical applications, building upon the strong groundwork laid by the course.</p>
+          <h3>Modules Included:</h3>
+          <div class="button-group">
+              <button href="PDF/Qualifications/Level 2/Building_It_Systems.pdf" target="_blank" class="Rockwell pdfLink Button">Building It Systems</button>
+            <button href="PDF/Qualifications/Level 2/Creating_A_Computer_Network.pdf" target="_blank" class="Rockwell pdfLink Button">Creating A Computer Network)</button>
+            <button href="PDF/Qualifications/Level 2/Essentials_Of_Cyber_Security.pdf" target="_blank" class="Rockwell pdfLink Button">Essentials Of Cyber Security</button>
+            <button href="PDF/Qualifications/Level 2/Essentials_Of_It.pdf" target="_blank" class="Rockwell pdfLink Button">Essentials Of IT</a>
+          </div>
+          <br>
+          <div class="button-group">
+          <button href="PDF/Qualifications/Level 2/It_Hardware_Installation_And_Upgrade.pdf" target="_blank" class="Rockwell pdfLink Button">IT Hardware Installation And Upgrade</button>
+            <button href="PDF/Qualifications/Level 2/It_Software_Installation_And_Upgrade.pdf" target="_blank" class="Rockwell pdfLink Button">IT Software Installation And Upgrade</button>
+            <button href="PDF/Qualifications/Level 3 Year 1/Internet_Of_Everything.pdf" target="_blank" class="Rockwell pdfLink Button">Supporting IT Functions</button>
+            <button href="PDF/Qualifications/Level 2/Using_Emerging_Technologies.pdf" target="_blank" class="Rockwell pdfLink Button">Using Emerging Technologies</a>
+          </div>
+        </div>
+        <br/>
+         <button id="openPopup6" class="btn text-left qualification-button Rockwell"><h6>GCSE - English Language</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup6" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2>English</h2>
+          <h3>Duration: </h3>
+          <p>2013 - 2019</p>
+          <h3>Grade Achieved:</h3>
+          <p>4 (Equal to a Lower C)</p>
+          <h3>Overview:</h3>
+          <p>In my English Language GCSE exam, I engaged with three assessments: Explorations in creative reading and writing, Writers' viewpoints and perspectives, and a Non-exam assessment. The first two assessments were written exams, each lasting 1 hour and 45 minutes, evaluating creative reading, writing, and analyzing writers' viewpoints. The third component was a spoken language assessment, marked by the teacher without contributing to the GCSE grade. This exam encompassed reading, writing, presenting, responding to questions and feedback, and using Standard English.</p>
+          <h3>Modules Included:</h3>
+          <div class="button-group-left">
+              <button href="PDF/Qualifications/English/Paper_One.PDF" target="_blank" class="Rockwell pdfLink Button">Paper One</button>
+            <button href="PDF/Qualifications/English/Paper_Two.PDF" target="_blank" class="Rockwell pdfLink Button">Paper Two</button>
+
+          </div>
+        </div>
+        <br/>
+      </div>
+      <div class="col-md d-flex align-items-center"> 
+        <span>
+        <img src="Image/West_Notss_College.jpg" alt="West Notts College Photo" class="profile-image"> 
+        <h5 class = "Futura-Bk-BT">Address: Derby Rd, Mansfield NG18 5BH</h5>
+        <h5 class = "Futura-Bk-BT">Phone number: 08081003626</h5>
+        <span class = "button-group1">
+          <a href="#" id="openTunaPopup" class = "Rockwell custom-link indented-text" style="color: #F49719; ">Written Reference</a>
+          <p class="Rockwell" style="color: #F49719; ">&#124;</p>
+          <a id="openPikePopup" class = "Rockwell custom-link indented-text" style="color: #F49719; ">Extra Coursese</a>
+          <p class="Rockwell" style="color: #F49719; ">&#124;</p>
+          <a id="openPopup12" class = "Rockwell custom-link extra-button indented-text" style="color: #F49719; ">Other Contact Options</a>
+        </span>
+
+
+        <!-- Popup container -->
+        <div id="popup12" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2>References</h2>
+          <h3>Aarron Hulka</h3>
+          <p>Email: <br/>
+          <a class="Rockwell" href="mailto:aaron.hulka@wnc.ac.uk"> aaron.hulka@wnc.ac.uk</a> </p>
+          <p>Relation to me:</p>
+          <p>He assumed the role of one of my instructors for the previously referenced courses. His skilful direction and extensive proficiency actively moulded my grasp of the subjects and nurtured the expansion of my academic ability. His perceptive mentorship was a driving force, propelling my cognitive advancement and significantly enriching my educational progress.</p>
+          <h3>Scott Marshall</h3>
+          <p>Email: <br/>
+          <a class="Rockwell" href="mailto:Scott.Marshall@wnc.ac.uk"> Scott.Marshall@wnc.ac.uk</a> </p>
+          <p>Relation to me:</p>
+          <p>He undertook the position of one of my educators for the courses previously mentioned. His adept guidance and substantial expertise actively shaped my understanding of the subjects and fostering the growth of my academic mastery. His insightful mentorship acted as a catalyst, propelling my intellectual development and markedly contributing to my overall educational advancement.</p>
+        </div>
+        </span>          
+      </div>
+    </div>
+  </div>
+
+  <div class="container align-items-center mb-1 mt-4">
+    <div class="row">
+      <div class="col align-items-left">
+        <h1 class="Futura-Bk-BT">Samworth Church Academy</h1>
+        <p class="font-weight-bold Rockwell indented-text"> Click the qualification for more info</p>
+        <button id="openPopup4" class="btn text-left qualification-button Rockwell"><h6>GCSE - Mathematics</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup4" class="popup-container">
+         <span id="closeBtn" class="close-btn">Close</span>
+          <h2>Mathematics</h2>
+          <h3>Duration: </h3>
+          <p>2018 - 2019</p>
+          <h3>Grade Achieved:</h3>
+          <p>5 (Equal to a Lower B or high C)</p>
+          <h3>Overview:</h3>
+          <p>My experience with the Pearson Edexcel Level 1/Level 2 GCSE (9-1) in Mathematics has been incredibly enriching, offering a comprehensive understanding of mathematical methods and concepts. This qualification has equipped me with the ability to apply diverse mathematical techniques to solve a variety of problems effectively. The topics covered, ranging from whole numbers and decimals to fractions, percentages, and standard form, have honed my practical skills in mathematics and deepened my appreciation for its pervasive role in everyday life and the professional sphere.</p>
+          <h3>Modules Included:</h3>
+          <div class="button-group-left">
+              <button href="PDF/Qualifications/Maths/Paper_One.pdf" target="_blank" class="Rockwell pdfLink Button">Paper One</button>
+            <button href="PDF/Qualifications/Maths/Paper_Two.pdf" target="_blank" class="Rockwell pdfLink Button">Paper Two</button>
+            <button href="PDF/Qualifications/Maths/Paper_Three.pdf" target="_blank" class="Rockwell pdfLink Button">Paper Three</button>
+          </div>
+        </div>
+        <br/>
+        <button id="openPopup5" class="btn text-left qualification-button Rockwell"><h6>GCSE - Combined Science: Trilogy (Double Award Course)</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup5" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2>Combined Science: Trilogy (Double Award Course)</h2>
+          <h3>Duration:</h3>
+          <p>2013 - 2018</p>
+          <h3>Grade Achieved:</h3>
+          <p>Two 5s (equal to a Lower B or high C)</p>
+          <h3>Overview:</h3>
+          <p>This exam gave me a comprehensive grasp of science as it delved into Biology, Chemistry, and Physics, granting me a broad perspective. The course content encompassed around two-thirds of what Triple Award Science students cover, ensuring a substantial learning experience. Completing the course was rewarded with two GCSEs, underlining its significance. </p>
+          <h3>Modules Included:</h3>
+           <div class="button-group-left">
+              <button href="PDF/Qualifications/Science/B_Paper_One.PDF" target="_blank" class="Rockwell pdfLink Button">Biology Paper One</button>
+            <button href="PDF/Qualifications/Science/P_Paper_One.PDF" target="_blank" class="Rockwell pdfLink Button">Physics Paper One</button>
+            <button href="PDF/Qualifications/Science/C_Paper_One.PDF" target="_blank" class="Rockwell pdfLink Button">Chemistry Paper One</button>
+          </div>
+          <br>
+          <div class="button-group-left">
+              <button href="PDF/Qualifications/Science/B_Paper_Two.PDF" target="_blank" class="Rockwell pdfLink Button">Biology Paper Two</button>
+            <button href="PDF/Qualifications/Science/P_Paper_Two.PDF" target="_blank" class="Rockwell pdfLink Button">Physics Paper Two</button>
+            <button href="PDF/Qualifications/Science/C_Paper_Two.PDF" target="_blank" class="Rockwell pdfLink Button">Chemistry Paper Two</button>
+          </div>
+        </div>
+        <br/>
+        
+        <button id="openPopup8" class="btn text-left qualification-button Rockwell"><h6>GCSE - Information & communication technology</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup8" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2>Information & communication technology</h2>
+          <h3>Duration:</h3>
+          <p>2013 - 2018</p>
+          <h3>Grade Achieved:</h3>
+          <p>B</p>
+          <h3>Overview:</h3>
+          <p>Engaging with this GCSE was an illuminating experience that unravelled the intricacies of computer systems, digital tools utilization, information retrieval, digital product development, and e-safety awareness. This comprehensive curriculum was strategically crafted to equip me with tangible proficiencies in navigating ICT tools, simultaneously nurturing my comprehension of ICT's pervasive role in daily routines and professional landscapes. Through this course, I cultivated a robust foundation in practical ICT skills while gaining valuable insights into its real-world applications, leaving me better prepared for the digital realm in work and everyday life.</p>
+          <h3>Modules Included:</h3>
+           <div class="button-group-left">
+              <button href="PDF/Qualifications/ICT/Exam.pdf" target="_blank" class="Rockwell pdfLink Button">Exam</button>
+            <button href="PDF/Qualifications/ICT/Practical.pdf" target="_blank" class="Rockwell pdfLink Button">Course Work</button>
+          </div>
+        </div>
+        <br/>
+
+        <button id="openPopup9" class="btn text-left qualification-button Rockwell"><h6>GCSE - Level 1/2 Cambridge National Certificate Creative Imedia</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup9" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2>Level 1/2 Cambridge National Certificate Creative Imedia</h2>
+          <h3>Duration:</h3>
+          <p>2013 - 2018</p>
+          <h3>Grade Achieved:</h3>
+          <p>Distinction at level 1</p>
+          <h3>Overview:</h3>
+          <p>Through this GCSE program, I've gained a wide array of knowledge and skills in creative digital media. The curriculum included two mandatory units and the choice of two additional units, focusing on the development of digital media products such as graphics, websites, and photography. The assessment approach combined exams and coursework, allowing me to showcase my theoretical understanding and practical abilities. </p>
+          <h3>Modules Included:</h3>
+           <div class="button-group-left">
+              <button href="PDF/Qualifications/Imedia/Exam.pdf" target="_blank" class="Rockwell pdfLink Button">Exam</button>
+            <button href="PDF/Qualifications/Imedia/Practical.pdf" target="_blank" class="Rockwell pdfLink Button">Course Work</button>
+          </div>
+        </div>
+        <br/>
+
+        <button id="openPopup10" class="btn text-left qualification-button Rockwell"><h6>GCSE - Design & Technology: Graphic Products</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup10" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2>Design & Technology: Graphic Products</h2>
+           <h3>Duration:</h3>
+          <p>2013 - 2018</p>
+          <h3>Grade Achieved:</h3>
+          <p>D</p>
+          <h3>Overview:</h3>
+          <p>My experience with the GCSE in Design and Technology: Graphic Products has fostered a profound comprehension of graphic design, insights into industrial processes, and practical skills. The course delves into design decision-making, sustainability concepts, and design's societal influence. I've engaged with industrial procedures like modelling, prototyping, and forming techniques, honing graphic design abilities and recognizing their relevance in practical scenarios.</p>
+          <h3>Modules Included:</h3>
+           <div class="button-group-left">
+               <button href="PDF/Qualifications/Graphics/Exam.pdf" target="_blank" class="Rockwell pdfLink Button">Exam</button>
+            <button href="PDF/Qualifications/Graphics/Practical.pdf" target="_blank" class="Rockwell pdfLink Button">Course Work</button>
+          </div>
+        </div>
+        <br/>
+
+        <button id="openPopup11" class="btn text-left qualification-button Rockwell"><h6>GCSE - Religious Studies</h6></button>
+
+        <!-- Popup container -->
+        <div id="popup11" class="popup-container">
+          <span id="closeBtn" class="close-btn">Close</span>
+          <h2>Religious Studies</h2>
+          <h3>Duration:</h3>
+          <p>Duration: 2013 - 2018</p>
+          <h3>Grade Achieved:</h3>
+          <p>3 (Equivalent to a D)</p>
+          <h3>Overview:</h3>
+          <p>Religious Studies has given me profound insights into diverse religious beliefs and contemporary ethical challenges. This qualification, overseen by AQA, features two components. The first covers the beliefs, teachings, and practices of two chosen religions, Christianity and Islam, evaluated through a 1 hour and 45-minute written exam. Component 2, we studied four themes: Relationships, crime and punishment. </p>
+          <h3>Modules Included:</h3>
+           <div class="button-group-left">
+              <button href="PDF/Qualifications/Religous Studies/Paper_One.PDF" target="_blank" class="Rockwell pdfLink Button">Paper One</button>
+            <button href="PDF/Qualifications/Religous Studies/Paper_Two_A.PDF" target="_blank" class="Rockwell pdfLink Button">Paper Two A</button>
+            <button href="PDF/Qualifications/Religous Studies/Paper_Two_B.PDF" target="_blank" class="Rockwell pdfLink Button">Paper Two B</button>
+          </div>
+        </div>
+      </span>
+    
+      </div>
+      <div class="col-md d-flex align-items-center"> 
+        <span>
+        <img src="Image/Samworth.jpg" alt="Samworth Church Academy Photo" class="profile-image">
+        <h5 class = "Futura-Bk-BT">Address: Sherwood Hall Rd, Mansfield NG18 2DY</h5>
+        <h5 class = "Futura-Bk-BT">Phone: 01623663450</h5>
+
+        <a href="#" id="openSalmonPopup" style="color: #F49719;" class = "Rockwell indented-text">Written Reference</a>
+        </span>          
+      </div>
+    </div>
+  </div>
+<div class="fishy-popup-container" id="fishyPdfPopup">
+  <span class="fishy-close-button" id="closeFishyPopup">Close</span>
+  <iframe src="" id="fishyPdfFrame" width="100%" height="100%" frameborder="0"></iframe>
+</div>
+
+<div class="footer py-3">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <p>
+          <span class="Futura-XBlk-BT">Email:</span> jakkirkie@gmail.com
+          <span class="Futura-XBlk-BT">Phone:</span> +44 7835418571
+          <span class="Futura-XBlk-BT">Linkedin:</span> <a href="https://www.linkedin.com/in/jak-kirkland-b1b549249" target="_blank" class="text-white">link</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  const openPopupButtons = document.querySelectorAll('.qualification-button, .extra-button');
+const closePopupButtons = document.querySelectorAll('.close-btn');
+const popups = document.querySelectorAll('.popup-container');
+
+openPopupButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    popups[index].style.display = 'block';
+  });
+});
+
+closePopupButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    popups[index].style.display = 'none';
+  });
+});
+</script>
+<script>
+  const openTunaPopupButton = document.getElementById('openTunaPopup');
+  const openPikePopupButton = document.getElementById('openPikePopup');
+  const openSalmonPopupButton = document.getElementById('openSalmonPopup');
+  const closeFishyPopupButton = document.getElementById('closeFishyPopup');
+  const fishyPdfPopup = document.getElementById('fishyPdfPopup');
+  const fishyPdfFrame = document.getElementById('fishyPdfFrame');
+  
+  openTunaPopupButton.addEventListener('click', () => {
+    fishyPdfPopup.style.display = 'block';
+    fishyPdfFrame.src = "PDF/West_Notts_Reference.pdf";
+  });
+
+    openPikePopupButton.addEventListener('click', () => {
+    fishyPdfPopup.style.display = 'block';
+    fishyPdfFrame.src = "PDF/Qualifications/Extra/Course.pdf";
+  });
+
+  openSalmonPopupButton.addEventListener('click', () => {
+    fishyPdfPopup.style.display = 'block';
+    fishyPdfFrame.src = 'PDF/Samworth_Reference.pdf';
+  });
+
+  closeFishyPopupButton.addEventListener('click', () => {
+    fishyPdfPopup.style.display = 'none';
+    fishyPdfFrame.src = ''; // Clear the iframe source
+  });
+</script>
+<script>
+  const pdfLinks = document.querySelectorAll('.pdfLink');
+        
+        pdfLinks.forEach(pdfLink => {
+            pdfLink.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent the default link behavior
+
+                const pdfUrl = pdfLink.getAttribute('href');
+                window.open(pdfUrl, '_blank');
+            });
+        });
+</script>
+</body>
+</html>
