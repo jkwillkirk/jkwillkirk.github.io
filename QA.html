@@ -20,7 +20,7 @@
        border: 1px solid #ccc;
        border-radius: 4px;
      }
-     input[type="button"] {
+    input[type="button"] {
        padding: 10px 20px;
        background-color: #183A68;
        color: white;
@@ -39,16 +39,52 @@
      }
 
      h2 {
-      display: none;
-      }
+    display: none;
+  }
 
+/* Define the @font-face for Futura XBlk BT */
+@font-face {
+  font-family: 'Futura XBlk BT';
+  src: url('ufonts.com_futura-xblk-bt-extra-black.ttf') format('truetype');
+}
 
+/* Apply Futura XBlk BT font to elements */
+.Futura-XBlk-BT {
+  font-family: 'Futura XBlk BT', sans-serif;
+}
+
+.Futura-XBlk-BT1 {
+  font-family: 'Futura XBlk BT', sans-serif;
+  font-size: 1.1em;
+}
+
+/* Define the @font-face for Futura Bk BT */
+@font-face {
+  font-family: 'Futura Bk BT';
+  src: url('ufonts.com_a-futuraorto.ttf') format('truetype');
+}
+
+/* Apply Futura Bk BT font to elements */
+.Futura-Bk-BT {
+  font-family: 'Futura Bk BT', sans-serif;
+}
+
+/* Define the @font-face for Rockwell Regular */
+@font-face {
+  font-family: 'Rockwell XBlk';
+  src: url('ufonts.com_mrockwell-light-opentype.otf') format('opentype');
+}
+
+/* Apply Rockwell Regular font to elements */
+.Rockwell {
+  font-family: 'Rockwell Regular', serif;
+}
    </style>
 </head>
 <body>
 
 <header>
-  <h1>Phone Conversation Questions</h1>
+  <h1 class="Futura-XBlk-BT">Phone Conversation Questions</h1>
   <h2>Gathering the required info from asking</h2>
 </header>
 
@@ -57,33 +93,33 @@
     <div id="sectionsContainer">
       <!-- Static Section 1 -->
       <div class="section" id="section_1">
-        <h3>Section 1: Questions for Carl Pugh</h3>
-        <label for="q1_1">Question 1:</label>
-        <span>Thinking about your recent growth trajectory, what challenges have you faced in maintaining operational efficiency, and could individuals with intense focus, attention to detail, and a determination to complete tasks help reduce the impact on overall productivity on you, your teams, and your organisation?</span>
-        <textarea id="q1_1" rows="4" placeholder="Type your answer here"></textarea>
+        <h3 class = "Futura-Bk-BT">Section 1: Questions for Carl Pugh</h3>
+        <label class="Rockwell XBlk" for="q1_1">Question 1:</label>
+        <span class="Rockwell XBlk">Thinking about your recent growth trajectory, what challenges have you faced in maintaining operational efficiency, and could individuals with intense focus, attention to detail, and a determination to complete tasks help reduce the impact on overall productivity on you, your teams, and your organisation?</span>
+        <textarea class="Rockwell XBlk" id="q1_1" rows="4" placeholder="Type your answer here"></textarea>
         
-        <label for="q2_1">Question 2:</label>
-        <span>As you look at your strategic goals for the upcoming year, what areas do you see as ripe for innovation, and could autistic individuals who bring fresh perspectives and a deep understanding of specific topics benefit in improving those areas, which could enhance your team’s effectiveness?</span>
+        <label class="Rockwell XBlk" for="q2_1">Question 2:</label>
+        <span class="Rockwell XBlk">As you look at your strategic goals for the upcoming year, what areas do you see as ripe for innovation, and could autistic individuals who bring fresh perspectives and a deep understanding of specific topics benefit in improving those areas, which could enhance your team’s effectiveness?</span>
         <textarea id="q2_1" rows="4" placeholder="Type your answer here"></textarea>
         
-        <label for="q3_1">Question 3:</label>
-        <span>Looking forward to the future, how does your team envision leveraging technology to drive efficiencies and better meet customer demands, and how might autistic team members whose genetic tailoring gives superior pattern analysis and data management skills help you get the most out of these technologies?</span>
-        <textarea id="q3_1" rows="4" placeholder="Type your answer here"></textarea>
+        <label class="Rockwell XBlk" for="q3_1">Question 3:</label>
+        <span class="Rockwell XBlk">Looking forward to the future, how does your team envision leveraging technology to drive efficiencies and better meet customer demands, and how might autistic team members whose genetic tailoring gives superior pattern analysis and data management skills help you get the most out of these technologies?</span>
+        <textarea class="Rockwell XBlk" id="q3_1" rows="4" placeholder="Type your answer here"></textarea>
       </div>
 
       <!-- Dynamic Section 2 -->
       <div class="section" id="section_2">
-        <h3>Section 2: Questions for Jak Kirkland</h3>
+        <h3 class = "Futura-Bk-BT">Section 2: Questions for Jak Kirkland</h3>
         <div id="dynamicQuestionsContainer">
-          <label for="dynamicQuestion_1">Question 1:</label>
-          <input type="text" id="dynamicQuestion_1" placeholder="Type your question here">
-          <textarea id="dynamicAnswer_1" rows="4" placeholder="Type your answer here"></textarea>
+          <label class="Rockwell XBlk" for="dynamicQuestion_1">Question 1:</label>
+          <input class="Rockwell XBlk" type="text" id="dynamicQuestion_1" placeholder="Type your question here">
+          <textarea  class="Rockwell XBlk" id="dynamicAnswer_1" rows="4" placeholder="Type your answer here"></textarea>
         </div>
       </div>
     </div>
 
-    <input type="button" value="Add Question to Section 2" onclick="addDynamicQuestion()">
-    <input type="button" value="Generate PDF" onclick="generatePDF()">
+    <input class="Rockwell XBlk" type="button" value="Add Question To Section 2" onclick="addDynamicQuestion()">
+    <input class="Rockwell XBlk" type="button" value="Generate PDF" onclick="generatePDF()">
   </form>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.4.0/dist/pdf-lib.min.js"></script>
@@ -251,7 +287,7 @@ async function generatePDF() {
   const blob = new Blob([pdfBytes], { type: 'application/pdf' });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
-  link.download = 'Questions_With_Jak_Kirkland.pdf';
+  link.download = 'Jak_Kirkland_Questions.pdf';
   link.click();
 }
 </script>
