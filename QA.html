@@ -22,14 +22,14 @@
      }
      input[type="button"] {
        padding: 10px 20px;
-       background-color: #28a745;
+       background-color: #183A68;
        color: white;
        border: none;
        border-radius: 4px;
        cursor: pointer;
      }
      input[type="button"]:hover {
-       background-color: #218838;
+       background-color: #646464;
      }
      .section {
        margin-bottom: 30px;
@@ -251,7 +251,7 @@ async function generatePDF() {
   const blob = new Blob([pdfBytes], { type: 'application/pdf' });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
-  link.download = 'dynamic_questionnaire.pdf';
+  link.download = 'Questions_With_Jak_Kirkland.pdf';
   link.click();
 }
 </script>
