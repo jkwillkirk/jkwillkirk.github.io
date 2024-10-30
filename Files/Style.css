@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Futura XBlk BT';
+  src: url('Files/ufonts.com_futura-xblk-bt-extra-black.ttf') format('truetype');
+}
+.Futura-XBlk-BT {
+  font-family: 'Futura XBlk BT', sans-serif;
+}
+.Futura-XBlk-BT1 {
+  font-family: 'Futura XBlk BT', sans-serif;
+  font-size: 1.1em;
+}
+@font-face {
+  font-family: 'Futura Bk BT';
+  src: url('Files/ufonts.com_a-futuraorto.ttf') format('truetype');
+}
+.Futura-Bk-BT {
+  font-family: 'Futura Bk BT', sans-serif;
+}
+@font-face {
+  font-family: 'Rockwell XBlk';
+  src: url('Files/ufonts.com_mrockwell-light-opentype.otf') format('opentype');
+}
+.Rockwell {
+  font-family: 'Rockwell Regular', serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Futura XBlk BT', sans-serif;
+  color: black;
+  }
+header {
+  vertical-align: center;
+  align-items: center;
+  background-color: #183B68;
+  color: white;
+  padding: 0.5em 1em;
+  height: 5em;
+  text-align: center;
+  }
+header h1 {
+  font-size: 2em;
+  margin: 0;
+  font-family: 'Futura Bk BT', sans-serif;
+}
+header p {
+  font-size: 15px;
+  margin: 0;
+  font-family: 'Rockwell Regular', sans-serif;
+}
+.Main-Div {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  word-wrap: break-word;
+}
+section {
+  background-color: lightgray;
+  width: 96%;
+  max-width: 96%;
+  height: 96%;
+  max-height: 96%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  box-shadow: 0 5em 5em rgba(0, 0, 0, 0.1);
+}
+table {
+    width: 100%;
+    display: table;
+    text-align: center;
+    vertical-align: top;
+  }
+  td {
+    display: table-cell;
+    text-align: center;
+    vertical-align: top;
+    margin-left: 8%;
+  }
+  td:first-child {
+    display: none;
+  }
+  td:nth-child(2) {
+    width: 100%;
+  }
+  td:nth-child(3) {
+    width: auto;
+   text-align: center;
+    font-size: x-small; 
+  }
+td:nth-child(2), td:nth-child(3) {
+  display: block;
+}
+td:nth-child(3) {
+  margin-top: 2%;
+  text-align: center;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.image {
+  float: right;
+  height: 40vh;
+  width: 40vw;
+  }
+.column1 {
+  float: left;
+  width: 45%;
+  margin-left: 4%;
+}
+.column2 {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  table {
+    width: 70%;
+    display: block;
+    margin-left: 25%;
+    margin-right: 5%;
+  }
+  td {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  td:first-child {
+    display: block;
+  }
+  td:nth-child(2) {
+    width: 100%;
+  }
+  td:nth-child(3) {
+    width: auto;
+   text-align: center;
+    font-size: x-small; 
+  }
+td:nth-child(2), td:nth-child(3) {
+  display: block;
+}
+td:nth-child(3) {
+  margin-top: 2%;
+  text-align: center;
+}
+  .row {
+    flex-direction: column;
+  }
+  .column1, .column2 {
+    width: 100%;
+  }
+
+  .column1 {
+  float: left;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+}
+@media screen and (max-width: 600px) {
+  table {
+    width: 98%;
+    display: block;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  td {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  td:first-child {
+    display: block;
+  }
+  td:nth-child(2) {
+    width: 100%;
+  }
+  td:nth-child(3) {
+    width: auto;
+   text-align: center;
+    font-size: x-small; 
+  }
+td:nth-child(2), td:nth-child(3) {
+  display: block;
+}
+td:nth-child(3) {
+  margin-top: 2%;
+  text-align: center;
+}
+  .row {
+    flex-direction: column;
+  }
+  .column1, .column2 {
+    width: 100%;
+  }
+
+  .column1 {
+  float: left;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+}
+.button {
+ vertical-align: center;
+  align-items: center;
+  background-color: #183B68;
+  color: white;
+  height: 2em;
+  text-align: center;
+  margin-left: 10em;
+}
