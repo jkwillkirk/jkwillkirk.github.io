@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Interview Prep Guide: RPA Developer</title>
+    <title>Interview Briefing: Taras Litowczuk & Sharon Adkin</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Chosen Palette: Calm Harmony -->
-    <!-- Application Structure Plan: A tab-based SPA to deconstruct the interview strategy into four key competency clusters: Security Guardian, Pragmatic Innovator, Synthesis, and Organizational Alignment. This thematic structure is chosen over a linear document scroll to allow the user to focus on one competency area at a time, preventing information overload. Within each cluster, questions are grouped into sub-categories and placed in interactive accordions to encourage active exploration and make the 100 questions manageable. This design prioritizes user-led learning and synthesis of the core strategic concepts. -->
-    <!-- Visualization & Content Choices: Report Info: 100 competency-based questions and strategic analysis. Goal: Organize and present for user exploration. Viz/Presentation Method: The primary structure is a tabbed interface (HTML/Tailwind). The questions are organized into interactive accordion lists (HTML/JS/Tailwind). Goal: Inform. Presentation Method: Key concepts like the core hypothesis are presented in styled callout boxes (HTML/Tailwind). Interaction: The user interacts by clicking tabs to switch between competency clusters and clicking accordion headers to reveal specific question sets. This allows for a self-paced deep dive into the material. Justification: This structure breaks down a dense, text-heavy report into a digestible, interactive format, which is superior for learning and preparation than a static document. Library/Method: Vanilla JS for all interactions. NO SVG/Mermaid used. -->
+    <!-- Application Structure Plan: The SPA is re-architected into a stakeholder-centric model with four tabs: 1) Questions from the Technical Architect (Taras Litowczuk), 2) Questions from the Business Strategist (Sharon Adkin), 3) Synthesis & Scenario questions where their interests converge, and 4) Organizational Alignment questions. This structure is superior to the previous generic model because it allows the user to prepare for the specific mindsets and priorities of the known interviewers. Accordions within each tab group related questions, making the content digestible and focused. This design directly simulates the dual nature of the interview. -->
+    <!-- Visualization & Content Choices: Report Info: The new intelligence briefing and the revised 100 questions. Goal: Organize and present questions based on the likely questioner. Viz/Presentation Method: A tabbed interface (HTML/Tailwind) separates content by interviewer. Interactive accordions (HTML/JS/Tailwind) group question sub-categories. Interaction: User clicks tabs to switch between interviewer perspectives and clicks accordions to drill down into specific topics. Justification: This interactive structure directly mirrors the strategic need to address two different stakeholder personas, providing a highly targeted preparation experience. Library/Method: Vanilla JS for all interactions. NO SVG/Mermaid used. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* slate-50 */
+            background-color: #f8fafc;
         }
         .tab-active {
-            border-color: #334155; /* slate-700 */
-            color: #334155; /* slate-700 */
+            border-color: #1e3a8a; /* blue-800 */
+            color: #1e3a8a; /* blue-800 */
             background-color: #ffffff;
         }
         .tab-inactive {
             border-color: transparent;
-            color: #64748b; /* slate-500 */
+            color: #475569; /* slate-600 */
         }
         .accordion-content {
             max-height: 0;
@@ -41,25 +41,25 @@
 
     <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-6xl">
         <header class="text-center mb-8">
-            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">Forensic Analysis of the RPA Developer Interview</h1>
-            <p class="mt-2 text-lg text-slate-600">An Interactive Guide for Derbyshire Constabulary</p>
+            <h1 class="text-3xl sm:text-4xl font-bold text-slate-900">Strategic Interview Briefing: RPA Developer</h1>
+            <p class="mt-2 text-lg text-slate-600">Derbyshire Constabulary Panel: T. Litowczuk & S. Adkin</p>
         </header>
 
         <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200 mb-8">
-            <h2 class="text-2xl font-semibold text-slate-800 mb-3">The Core Hypothesis</h2>
-            <p class="text-slate-600">The interview is predicted to be a sequential, two-stage evaluation designed to identify a **"Security-Conscious Innovator."** This is a hierarchical assessment. A rational interview process must first apply a filter to identify candidates who can operate safely in this high-stakes environment (the **Security Guardian**). Only after that foundational threshold is met will it seek to differentiate between safe candidates to find the one who can best drive the modernization agenda (the **Pragmatic Innovator**).</p>
+            <h2 class="text-2xl font-semibold text-slate-800 mb-3">The Interview Dynamic</h2>
+            <p class="text-slate-600">The interview is a synthesis of two priorities. **Taras Litowczuk (Technical Architect)** will assess your technical depth, architectural mindset, and ability to build secure, scalable solutions within the Microsoft Power Platform. **Sharon Adkin (Business Strategist)** will assess your understanding of business value, ROI, and your ability to function as a strategic asset who can fill the force's "skills gap" and deliver tangible results for the public service mission.</p>
         </section>
 
         <main class="bg-white rounded-lg shadow-md border border-slate-200">
             <nav class="border-b border-slate-200 flex flex-wrap -mb-px">
-                <button data-tab="guardian" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-active">
-                    🛡️ The Security Guardian
+                <button data-tab="litowczuk" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-active">
+                    💻 Taras Litowczuk
                 </button>
-                <button data-tab="innovator" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-inactive">
-                    💡 The Pragmatic Innovator
+                <button data-tab="adkin" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-inactive">
+                    📈 Sharon Adkin
                 </button>
                 <button data-tab="synthesis" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-inactive">
-                    ⚖️ The Security-Conscious Innovator
+                    ⚖️ Synthesis & Scenarios
                 </button>
                 <button data-tab="alignment" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-inactive">
                     🤝 Organizational Alignment
@@ -67,146 +67,118 @@
             </nav>
 
             <div id="content-container" class="p-6">
-                <!-- Guardian Content -->
-                <div id="guardian" class="tab-content">
+                <!-- Taras Litowczuk Content -->
+                <div id="litowczuk" class="tab-content">
                     <div class="mb-6">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Foundational Competencies: The Security Guardian</h2>
-                        <p class="text-slate-600">This section contains questions designed to rigorously assess suitability for a high-risk, high-compliance environment. These questions test the non-negotiable, foundational attributes required to operate safely and ethically within a police force. The focus is on an innate approach to security, discipline in critical environments, and the ability to handle sensitive data with the requisite care and legal understanding.</p>
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Questions from the Technical Architect</h2>
+                        <p class="text-slate-600">These questions test your technical depth, architectural mindset, and alignment with a user-centered, security-first development philosophy within the Microsoft ecosystem. The goal is to prove you are a professional developer, not just a coder.</p>
                     </div>
                     <div class="space-y-4">
-                        <!-- Accordion Item 1.1 -->
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">1.1 Information Security & Legislative Compliance</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Technical Proficiency (Microsoft Ecosystem)</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Describe a time when you were responsible for designing a process that handled sensitive or personally identifiable information. What steps did you take to ensure compliance with data protection legislation from the initial design phase?</li>
-                                    <li>Explain your understanding of the principle of 'data minimization'. Provide an example of how you have applied this principle in a past automation project.</li>
-                                    <li>How would you approach designing an audit trail for an RPA solution that accesses and updates records in a system containing sensitive criminal justice data? What specific information would you ensure is logged?</li>
-                                    <li>Tell us about a situation where a user requirement for a new feature appeared to conflict with information security best practices. How did you handle this conflict?</li>
-                                    <li>What is your process for conducting a risk assessment on a business process before you begin designing an automation solution for it?</li>
-                                    <li>In the context of the Data Protection Act 2018 and GDPR, what are your primary considerations when an automated process involves the transfer of data between two different systems?</li>
-                                    <li>Describe your experience with implementing role-based access control within an automated solution. Why is this particularly important in a policing environment?</li>
-                                    <li>Imagine you discover that an existing automation, built by a former colleague, does not have adequate security controls. What would be your immediate actions?</li>
-                                    <li>How do you ensure that security considerations are maintained throughout the entire development lifecycle, from initial concept to deployment and ongoing maintenance?</li>
-                                    <li>What steps would you take to secure credentials, API keys, and other secrets used by an RPA bot to access secure systems?</li>
+                                    <li>Describe your most complex automation built using Power Automate, detailing your use of both cloud flows and desktop flows.</li>
+                                    <li>Explain how you have used Dataverse as a secure and scalable backend for a Power App or automation.</li>
+                                    <li>Tell us about a time you built a solution that deeply integrated Power Automate and SharePoint Online for document management.</li>
+                                    <li>Describe a complex problem you solved using PowerShell. How did it interact with other M356 or Azure services?</li>
+                                    <li>How do you decide when to use a Power Automate cloud flow versus a desktop flow? What are the architectural trade-offs?</li>
+                                    <li>What is your experience with Power Platform ALM and using solutions to move components between environments? Why is this critical?</li>
+                                    <li>How have you used or would you use AI Builder to create more intelligent automations?</li>
+                                    <li>What is your experience with version control systems like Azure DevOps or Git in the context of Power Platform development?</li>
+                                    <li>How would you approach debugging a complex cloud flow that is failing intermittently, using the tools available within the Power Platform?</li>
                                 </ul>
                             </div>
                         </div>
-                         <!-- Accordion Item 1.2 -->
-                        <div class="accordion-item border-t border-slate-200 pt-4">
+                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">1.2 Operational Integrity in Critical Live Environments</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Information Security & Compliance</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Describe your experience deploying a new solution into a 24/7 live operational environment. What specific measures did you take to minimize the risk of disruption?</li>
-                                    <li>Tell us about a time an automated process you were responsible for failed in a critical, time-sensitive situation. Walk us through your troubleshooting process and how you communicated with stakeholders.</li>
-                                    <li>How do you define 'reliability' in the context of an automation that supports a critical public safety function, as opposed to a standard corporate function?</li>
-                                    <li>What is your strategy for testing an RPA solution to ensure it is robust enough for a mission-critical environment? Go beyond simple functional testing.</li>
-                                    <li>Imagine an automation you built has failed and is disrupting a live dashboard used by senior leadership for command and control. How would you balance the urgency of a fix with the need to avoid introducing further instability?</li>
-                                    <li>Describe your approach to creating documentation for an RPA solution. How do you ensure it is comprehensive enough for another developer to support it during a critical out-of-hours incident?</li>
-                                    <li>How would you design an RPA solution to handle unexpected system errors, network outages, or application pop-ups gracefully, without crashing or corrupting data?</li>
-                                    <li>Provide an example of a time you had to manage and maintain a solution in an enterprise-scale environment. What were the unique challenges of operating at that scale?</li>
-                                    <li>Explain the importance of maintainability and portability in the design of your solutions. How does this contribute to long-term operational integrity?</li>
-                                    <li>What steps would you take before upgrading an existing RPA solution in a live environment to ensure the new version performs as expected without causing unforeseen issues?</li>
+                                    <li>How would you design an audit trail for a solution that updates records in Dataverse for legal defensibility?</li>
+                                    <li>Describe your experience implementing security roles in Dataverse to enforce role-based access control.</li>
+                                    <li>What is your preferred method for securing credentials and API keys for a Power Automate flow, referencing Azure Key Vault or similar?</li>
+                                    <li>Imagine you discover an existing cloud flow that stores a password in plain text. What are your immediate actions?</li>
+                                    <li>How do you ensure security is maintained throughout the entire Power Platform ALM?</li>
+                                    <li>Explain the role of Azure Active Directory and service principals in authentication for a solution using a custom connector.</li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- Accordion Item 1.3 -->
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">1.3 Data Integrity and Secure System Integration</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Operational Integrity & ALM</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Describe your experience using APIs to integrate two or more different systems. What were the main challenges related to data consistency and security?</li>
-                                    <li>Imagine you are tasked with automating a process that requires pulling data from a national police database via a legacy API and pushing it into a modern cloud-based system. What would be your primary security and data integrity concerns?</li>
-                                    <li>Explain your understanding of the difference between SQL and NoSQL databases. Provide a hypothetical scenario in a policing context where one might be more appropriate than the other.</li>
-                                    <li>Tell us about a project where you had to work with data that had a high requirement for accuracy and integrity. How did you validate the data handled by your automated process?</li>
-                                    <li>How would you design an error-handling routine for an automation that writes data to a critical database, ensuring that a partial failure does not lead to data corruption?</li>
-                                    <li>What are the challenges of working with web services in a highly secure environment that may have strict firewall and proxy configurations?</li>
-                                    <li>Describe a situation where you had to extract, transform, and load (ETL) data as part of an automation. How did you ensure the integrity of the data at each stage of the process?</li>
-                                    <li>In a multi-agency context, how would you approach the design of an automated data-sharing process to ensure it is secure, auditable, and compliant with legal agreements?</li>
-                                    <li>What is your experience in managing different versions of an API? How would you ensure your automations are resilient to changes in the systems they connect to?</li>
-                                    <li>Explain the role of authentication and authorization when designing a solution that uses an API to access a secure system.</li>
+                                    <li>Describe your experience deploying a Power Platform solution into a 24/7 live environment. How did you use solutions management to minimize disruption?</li>
+                                    <li>Tell us about a time a critical Power Automate flow failed. Walk us through your troubleshooting and communication process.</li>
+                                    <li>What is your strategy for testing a Power Automate desktop flow to ensure it is robust enough for a mission-critical environment?</li>
+                                    <li>How would you design a cloud flow to handle unexpected system errors, network timeouts, or API throttling gracefully?</li>
+                                    <li>Explain the importance of maintainability when building cloud flows and how this reduces technical debt.</li>
+                                    <li>What steps would you take before deploying an update to a Power App or flow in a live environment?</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Innovator Content -->
-                <div id="innovator" class="tab-content hidden">
+                <!-- Sharon Adkin Content -->
+                <div id="adkin" class="tab-content hidden">
                     <div class="mb-6">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Transformational Competencies: The Pragmatic Innovator</h2>
-                        <p class="text-slate-600">This section assesses the ability to deliver the core purpose of the role: adding value and improving efficiency through automation. The focus shifts from risk mitigation to value creation, testing technical proficiency, problem-solving, and the ability to translate organizational needs into effective technical solutions.</p>
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Questions from the Business Strategist</h2>
+                        <p class="text-slate-600">These questions assess your understanding of business value, strategic alignment, and your ability to function as a long-term asset. The goal is to prove you understand the "why" behind the technology and can deliver a tangible return on investment.</p>
                     </div>
                      <div class="space-y-4">
-                        <!-- Accordion Item 2.1 -->
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">2.1 Process Analysis and Automation Design</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Business Value & ROI</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Walk us through your methodology for analyzing a manual business process to determine its suitability for automation. What key characteristics do you look for?</li>
-                                    <li>Describe a time you identified an opportunity for automation that others had overlooked. How did you build a case for your proposed solution?</li>
-                                    <li>Provide an example of a process you automated where the biggest challenge was not technical, but rather the complexity of the business logic and rules.</li>
-                                    <li>How do you go about mapping an existing "as-is" process and designing a future "to-be" automated process? What tools or techniques do you use?</li>
-                                    <li>Tell us about a time you had to design an automation that involved multiple decision points and conditional logic. How did you ensure the logic was comprehensive and correct?</li>
-                                    <li>Explain the concept of 'workflow-based logic'. How does this concept inform the way you structure and design your automation solutions?</li>
-                                    <li>Imagine you are asked to automate a poorly documented and inconsistent manual process. What would be your first steps?</li>
-                                    <li>How do you quantify the potential benefits of an automation project, such as time saved, error reduction, or improved efficiency?</li>
-                                    <li>Describe a situation where, after analysis, you recommended not to automate a process. What was your reasoning?</li>
-                                    <li>When designing a new automated workflow, how do you factor in scalability and the potential for future changes to the process?</li>
+                                    <li>Describe a time you identified an opportunity for automation. How did you build a business case focused on its value?</li>
+                                    <li>How do you quantify the potential ROI of an automation project in terms a Business Lead would value (e.g., time saved, error reduction, enabling officer visibility)?</li>
+                                    <li>Describe a situation where, after analysis, you recommended not to automate a process. What was your business-focused reasoning?</li>
+                                    <li>This role exists to fill a "skills gap." How do you see yourself delivering more value than an external contractor?</li>
+                                    <li>How can automation directly support the force's key performance objective of "Good use of resources"?</li>
+                                    <li>Walk us through how you would ensure an automation project delivers its promised benefits after deployment.</li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- Accordion Item 2.2 -->
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">2.2 Technical Proficiency and Solution Development</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Stakeholder Engagement & User-Centric Design</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Describe a complex problem you solved using a programming or scripting language such as Python or PowerShell. What was the problem and what was your approach?</li>
-                                    <li>This role involves using automation tools like UIPath or Power Automate. Describe a project where you used a similar platform to build a significant automation.</li>
-                                    <li>How do you decide which tool or technology is the most appropriate for a given automation task? What factors influence your decision?</li>
-                                    <li>Explain your experience with object-oriented programming principles. How are these principles relevant to building scalable and maintainable RPA solutions?</li>
-                                    <li>Tell us about a time you had to learn a new programming language or automation tool quickly for a project. What was your learning process?</li>
-                                    <li>What is your experience with version control systems like Git? Why is version control important when developing automation solutions as part of a team?</li>
-                                    <li>Describe your approach to code modularity and reusability in your development work. Provide an example of a reusable component you have built.</li>
-                                    <li>The job description mentions a basic knowledge of AI and Machine Learning. How do you see these technologies enhancing the capabilities of RPA in a policing context?</li>
-                                    <li>What experience do you have with software deployment and lifecycle management? Walk us through the stages you would typically follow.</li>
-                                    <li>How would you approach debugging a complex automation that is failing intermittently without clear error messages?</li>
+                                    <li>Taras Litowczuk's philosophy is "user-centered." How do you ensure the solutions you build solve a tangible problem for the people using them?</li>
+                                    <li>How do you explain technical limitations to a non-technical manager who needs a solution urgently?</li>
+                                    <li>Tell us about a situation where project requirements changed. How did you adapt and manage stakeholder expectations?</li>
+                                    <li>What is your approach to User Acceptance Testing to ensure the business is happy with the final product?</li>
+                                    <li>You are demonstrating a new automation and the team is resistant to change. What steps would you take to gain their buy-in?</li>
+                                    <li>What is your philosophy on providing support and documentation to empower users and build an internal capability?</li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- Accordion Item 2.3 -->
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">2.3 Stakeholder Engagement and User-Centric Design</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Strategic Alignment & Filling the Skills Gap</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Describe a time you had to work with non-technical stakeholders to gather requirements for a new solution. How did you ensure you fully understood their needs?</li>
-                                    <li>How do you explain complex technical concepts or limitations to an audience that does not have a technical background?</li>
-                                    <li>Tell us about a situation where the requirements for a project changed midway through development. How did you adapt?</li>
-                                    <li>What is your approach to user acceptance testing (UAT)? How do you engage with users to ensure the solution you have built meets their expectations?</li>
-                                    <li>Provide an example of when you received negative feedback from a user about a solution you developed. What did you do?</li>
-                                    <li>How do you manage stakeholder expectations regarding timelines and the capabilities of automation technology?</li>
-                                    <li>Describe your experience working within an Agile development methodology. How do you believe this approach benefits automation projects?</li>
-                                    <li>Imagine you are demonstrating a new automation to a team, and they are resistant to the change. What steps would you take to gain their buy-in?</li>
-                                    <li>How do you ensure that the solutions you build are not just technically functional but also intuitive and user-friendly?</li>
-                                    <li>What is the role of a developer in providing support and documentation for end-users after a solution has been deployed?</li>
+                                    <li>What is your motivation for a public sector role within the police, as opposed to a private sector role?</li>
+                                    <li>How do you see this role contributing to the Constabulary's Health and Wellbeing Strategy by reducing administrative burden?</li>
+                                    <li>How would you approach mentoring other team members to help build a sustainable, in-house automation capability?</li>
+                                    <li>If tasked with helping to establish a Power Platform 'Center of Excellence', what would be the key pillars of your strategy from a business perspective?</li>
+                                    <li>How do you ensure your work consistently reflects the values of fairness, transparency, and public service?</li>
                                 </ul>
                             </div>
                         </div>
@@ -216,65 +188,37 @@
                 <!-- Synthesis Content -->
                 <div id="synthesis" class="tab-content hidden">
                     <div class="mb-6">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Synthesis & Strategic Thinking: The Security-Conscious Innovator</h2>
-                        <p class="text-slate-600">This advanced section uses complex, scenario-based questions to test the ability to synthesize the Guardian and Innovator profiles. It assesses judgement, strategic thinking, and the ability to navigate the inherent tensions of the role. The ideal candidate understands that the most effective solution is one that is not only efficient but also robust, secure, and legally defensible.</p>
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Synthesis & Scenario Questions</h2>
+                        <p class="text-slate-600">These questions test your ability to synthesize the technical and business perspectives. They assess your judgement and ability to navigate the inherent tensions between Mr. Litowczuk's technical mandate and Ms. Adkin's business objectives.</p>
                     </div>
                     <div class="space-y-4">
-                        <!-- Accordion Item 3.1 -->
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">3.1 Navigating Conflicts Between User Requirements and Security Protocols</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Navigating Conflicting Priorities</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>A user requests an automation that would email them a daily report containing sensitive personal data for convenience. This violates force policy. How would you respond to this request?</li>
-                                    <li>Imagine a stakeholder is pushing for a rapid deployment of a new automation to meet an urgent operational need, but you feel it has not been sufficiently tested for security vulnerabilities. Describe the steps you would take.</li>
-                                    <li>You are asked to integrate a new third-party cloud service into a workflow to add a powerful new feature. Your initial assessment reveals concerns about the service's data handling policies. How do you proceed?</li>
-                                    <li>Describe a situation where you had to make a decision that balanced project deadlines against the need for additional security hardening. What was your rationale?</li>
-                                    <li>A business team wants to use an RPA bot with a single, generic user account to access a system for simplicity. What are the risks of this approach, and how would you advocate for a more secure alternative?</li>
-                                    <li>How would you handle a disagreement with a senior, non-technical manager about the level of risk associated with a proposed automation?</li>
-                                    <li>A user story requires caching data locally for faster processing, but security protocols for the source system forbid persistent storage of its data. How do you resolve this technical and procedural conflict?</li>
-                                    <li>In your view, whose priorities should take precedence when a user's efficiency requirement conflicts with a legislative data protection requirement? Explain your reasoning.</li>
-                                    <li>What strategies would you use to build a culture where users and stakeholders see security not as a barrier, but as an enabler of safe and effective innovation?</li>
+                                    <li>Sharon Adkin is pushing for a rapid deployment to meet an urgent need, but you believe Taras Litowczuk's standards for security testing have not been met. Describe the steps you would take.</li>
+                                    <li>A user requests a flow that emails them a report with sensitive data. How would you explain to them, and potentially to Ms. Adkin, why this is a risk, while also proposing an alternative solution that meets their underlying business need?</li>
+                                    <li>A business team wants to use a single, generic user account for a desktop flow for simplicity. How would you explain the technical risks to Mr. Litowczuk and the business risks to Ms. Adkin?</li>
+                                    <li>Describe a decision you had to make that balanced project deadlines against the need for additional security hardening. How did you rationalize the decision to both technical and business stakeholders?</li>
+                                    <li>A user story requires caching data in a SharePoint list for faster Power App performance, but security protocols forbid it. How do you resolve this technical and procedural conflict, satisfying both sides?</li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- Accordion Item 3.2 -->
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">3.2 Strategic Risk Assessment in Automation</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Strategic Risk Assessment</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Beyond immediate cybersecurity threats, what other types of risks (e.g., operational, reputational, ethical) should be considered when automating processes within a police force?</li>
-                                    <li>Consider the automation of a process for redacting sensitive information from documents before disclosure. What are the primary risks, and how could an RPA solution be designed to mitigate them?</li>
-                                    <li>How could the automation of a data entry process potentially introduce unforeseen biases into a dataset? How might you guard against this?</li>
-                                    <li>Describe how an over-reliance on a single, complex automation could create a new single point of failure for a critical business function. How would you design for resilience?</li>
-                                    <li>When assessing a process for automation, how do you evaluate the risk of losing the valuable human oversight or judgement that was part of the manual process?</li>
-                                    <li>What are the potential risks of automating a process that is governed by frequently changing legislation or internal policies? How would you manage this?</li>
-                                    <li>Imagine the force is considering using AI/ML to automate the initial assessment of incoming incident reports. What would be your top three strategic risk considerations?</li>
-                                    <li>How can poorly designed automation make a process less transparent or auditable than its manual predecessor?</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Accordion Item 3.3 -->
-                        <div class="accordion-item border-t border-slate-200 pt-4">
-                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">3.3 Future-Focused Problem Solving and Continuous Improvement</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
-                            </button>
-                            <div class="accordion-content">
-                                <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>How do you stay current with the latest developments in RPA, automation, and related technologies?</li>
-                                    <li>Looking ahead three to five years, what do you believe will be the most significant trend in process automation, and how could it be applied to policing?</li>
-                                    <li>Describe how you would establish a framework for the continual service improvement of the automations you build and manage.</li>
-                                    <li>Tell us about a time you proactively identified and implemented an improvement to an existing process or system, without being asked to do so.</li>
-                                    <li>The job description mentions mentoring wider team members. How would you approach sharing your knowledge and upskilling colleagues in automation techniques?</li>
-                                    <li>How would you use data and metrics from your deployed automations to identify new opportunities for efficiency gains or process improvements?</li>
-                                    <li>What does the concept of 'technical debt' mean to you, and what is your strategy for managing it in your work?</li>
-                                    <li>If you were given the task of creating a 'center of excellence' for automation within the organization, what would be the key pillars of your strategy?</li>
+                                    <li>Beyond cybersecurity threats, what other risks (operational, reputational, ethical) should be considered when automating processes within a police force?</li>
+                                    <li>Consider automating a process for redacting sensitive information from documents. What are the primary risks, and how could a Power Platform solution be designed to mitigate them?</li>
+                                    <li>How could the automation of data entry potentially introduce unforeseen biases into a dataset? How might you guard against this from both a technical and business process perspective?</li>
+                                    <li>Describe how over-reliance on a single, complex cloud flow could create a new single point of failure. How would you explain this risk to Ms. Adkin?</li>
+                                    <li>When assessing a process for automation, how do you evaluate the risk of losing the valuable human oversight that was part of the manual process?</li>
                                 </ul>
                             </div>
                         </div>
@@ -284,54 +228,36 @@
                 <!-- Alignment Content -->
                 <div id="alignment" class="tab-content hidden">
                     <div class="mb-6">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Organizational Alignment and Values</h2>
-                        <p class="text-slate-600">This final section assesses alignment with the specific values and mission of Derbyshire Constabulary and the wider policing service. Technical skill alone is insufficient; a commitment to public service, ethical conduct, and collaborative working is essential for success and credibility within the organization.</p>
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Organizational Alignment & Values</h2>
+                        <p class="text-slate-600">This final section assesses your alignment with the specific values and mission of Derbyshire Constabulary. It explores your professional motivations, your approach to teamwork, and your commitment to personal development.</p>
                     </div>
                      <div class="space-y-4">
-                        <!-- Accordion Item 4.1 -->
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">4.1 Public Service Motivation and Ethical Conduct</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Motivation & Teamwork</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>What is your motivation for applying for this role within Derbyshire Constabulary, as opposed to a similar role in the private sector?</li>
                                     <li>What does the value of 'integrity' mean to you in a professional context?</li>
-                                    <li>Describe your understanding of the importance of public trust and confidence in policing. How can a role like this help to support it?</li>
-                                    <li>How would you ensure your work consistently reflects the values of fairness, transparency, and inclusivity?</li>
-                                    <li>This role requires handling highly sensitive information. What does this responsibility mean to you on a personal and professional level?</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Accordion Item 4.2 -->
-                        <div class="accordion-item border-t border-slate-200 pt-4">
-                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">4.2 Teamwork, Mentorship, and Communication</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
-                            </button>
-                            <div class="accordion-content">
-                                <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
                                     <li>Describe your ideal team working environment. What role do you typically play in a team?</li>
                                     <li>Tell us about a time you had a professional disagreement with a colleague. How did you resolve it?</li>
-                                    <li>The job description includes a responsibility to "mentor wider team members". What is your approach to mentoring or coaching others?</li>
-                                    <li>How do you ensure effective communication and collaboration when working on a project that involves multiple departments or teams?</li>
+                                    <li>How do you ensure effective communication on a project that involves multiple specialisms like data science and cloud engineering?</li>
                                     <li>Provide an example of a time when you contributed to the success of a team, even when it was outside of your direct responsibilities.</li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- Accordion Item 4.3 -->
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">4.3 Adaptability and Commitment to Professional Development</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin transform transition-transform duration-300">&#x276F;</span>
+                                <span class="font-semibold text-lg text-slate-700">Adaptability & Professional Development</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
                                     <li>Describe a time you faced a significant setback or failure in a project. What did you learn from the experience?</li>
-                                    <li>How do you approach receiving constructive criticism or feedback on your work?</li>
-                                    <li>What area of your professional skillset are you currently seeking to develop, and what steps are you taking to do so?</li>
-                                    <li>The field of technology changes rapidly. How do you adapt to new tools, processes, and ways of working?</li>
+                                    <li>How do you approach receiving constructive criticism or feedback on your work from a Lead Developer?</li>
+                                    <li>What area of the Power Platform or Azure are you currently seeking to develop, and what steps are you taking to do so?</li>
+                                    <li>The Microsoft ecosystem changes rapidly. How do you adapt to new features, processes, and ways of working?</li>
                                     <li>What are your long-term career aspirations, and how does this role at Derbyshire Constabulary fit into that vision?</li>
                                 </ul>
                             </div>
@@ -379,11 +305,19 @@
             accordionHeaders.forEach(header => {
                 header.addEventListener('click', () => {
                     const content = header.nextElementSibling;
-                    header.classList.toggle('accordion-header-active');
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                    } else {
+                    const isActive = header.classList.toggle('accordion-header-active');
+                    
+                    document.querySelectorAll('.accordion-header-active').forEach(activeHeader => {
+                        if(activeHeader !== header) {
+                           activeHeader.classList.remove('accordion-header-active');
+                           activeHeader.nextElementSibling.style.maxHeight = null;
+                        }
+                    });
+
+                    if (isActive) {
                         content.style.maxHeight = content.scrollHeight + "px";
+                    } else {
+                        content.style.maxHeight = null;
                     }
                 });
             });
@@ -392,3 +326,4 @@
 
 </body>
 </html>
+
