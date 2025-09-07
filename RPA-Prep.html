@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Chosen Palette: Calm Harmony -->
-    <!-- Application Structure Plan: The SPA is re-architected into a stakeholder-centric model with four tabs: 1) Questions from the Technical Architect (Taras Litowczuk), 2) Questions from the Business Strategist (Sharon Adkin), 3) Synthesis & Scenario questions where their interests converge, and 4) Organizational Alignment questions. This structure is superior to the previous generic model because it allows the user to prepare for the specific mindsets and priorities of the known interviewers. Accordions within each tab group related questions, making the content digestible and focused. This design directly simulates the dual nature of the interview. -->
-    <!-- Visualization & Content Choices: Report Info: The new intelligence briefing and the revised 100 questions. Goal: Organize and present questions based on the likely questioner. Viz/Presentation Method: A tabbed interface (HTML/Tailwind) separates content by interviewer. Interactive accordions (HTML/JS/Tailwind) group question sub-categories. Interaction: User clicks tabs to switch between interviewer perspectives and clicks accordions to drill down into specific topics. Justification: This interactive structure directly mirrors the strategic need to address two different stakeholder personas, providing a highly targeted preparation experience. Library/Method: Vanilla JS for all interactions. NO SVG/Mermaid used. -->
+    <!-- Application Structure Plan: The SPA is re-architected with a new primary tab, "Our Analytical Process," making it the default view. This new section uses accordions to detail the step-by-step analysis that led to the final strategy. The existing "Strategic Briefing," "Architect Questions," and "Strategist Questions" tabs follow. This four-tab structure provides a complete narrative, explaining the 'how' and 'why' of the strategy before presenting the questions themselves. -->
+    <!-- Visualization & Content Choices: Report Info: All previously supplied intelligence and analysis. Goal: To create a meta-narrative explaining the analytical process. Viz/Presentation Method: A four-tab interface. The new "Analytical Process" tab uses interactive accordions to present the logical flow of our joint analysis in a digestible format. Interaction: User can now explore the entire strategic journey, from initial analysis to final preparation tool. Justification: This fulfills the user's request for a section detailing "how we worked that out," making the application a comprehensive record of the entire strategic engagement. Library/Method: Vanilla JS. NO SVG/Mermaid used. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
@@ -45,38 +45,164 @@
             <p class="mt-2 text-lg text-slate-600">Derbyshire Constabulary Panel: T. Litowczuk & S. Adkin</p>
         </header>
 
-        <section class="bg-white p-6 rounded-lg shadow-md border border-slate-200 mb-8">
-            <h2 class="text-2xl font-semibold text-slate-800 mb-3">The Interview Dynamic</h2>
-            <p class="text-slate-600">The interview is a synthesis of two priorities. **Taras Litowczuk (Technical Architect)** will assess your technical depth, architectural mindset, and ability to build secure, scalable solutions within the Microsoft Power Platform. **Sharon Adkin (Business Strategist)** will assess your understanding of business value, ROI, and your ability to function as a strategic asset who can fill the force's "skills gap" and deliver tangible results for the public service mission.</p>
-        </section>
-
         <main class="bg-white rounded-lg shadow-md border border-slate-200">
-            <nav class="border-b border-slate-200 flex flex-wrap -mb-px">
-                <button data-tab="litowczuk" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-active">
-                    💻 Taras Litowczuk
+            <nav class="border-b border-slate-200 grid grid-cols-2 sm:grid-cols-4">
+                <button data-tab="process" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-active">
+                    📜 Our Analytical Process
+                </button>
+                <button data-tab="briefing" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-inactive">
+                    🧠 Strategic Briefing
+                </button>
+                <button data-tab="litowczuk" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-inactive">
+                    💻 The Architect
                 </button>
                 <button data-tab="adkin" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-inactive">
-                    📈 Sharon Adkin
-                </button>
-                <button data-tab="synthesis" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-inactive">
-                    ⚖️ Synthesis & Scenarios
-                </button>
-                <button data-tab="alignment" class="tab-button text-sm sm:text-base font-medium text-center py-4 px-3 sm:px-6 border-b-2 tab-inactive">
-                    🤝 Organizational Alignment
+                    📈 The Strategist
                 </button>
             </nav>
 
             <div id="content-container" class="p-6">
-                <!-- Taras Litowczuk Content -->
-                <div id="litowczuk" class="tab-content">
+                <!-- Our Analytical Process Content -->
+                <div id="process" class="tab-content">
                     <div class="mb-6">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Questions from the Technical Architect</h2>
-                        <p class="text-slate-600">These questions test your technical depth, architectural mindset, and alignment with a user-centered, security-first development philosophy within the Microsoft ecosystem. The goal is to prove you are a professional developer, not just a coder.</p>
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Deconstructing the Strategy: Our Process</h2>
+                        <p class="text-slate-600">This section provides an interactive breakdown of the analytical journey we undertook. It details how the initial intelligence was synthesized to produce the final, targeted interview preparation strategy.</p>
                     </div>
                     <div class="space-y-4">
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Technical Proficiency (Microsoft Ecosystem)</span>
+                                <span class="font-semibold text-lg text-slate-700">I. Initial Intelligence & The Core Problem</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="pt-4 space-y-3 text-slate-600 prose">
+                                    <p><strong class="text-slate-700">What:</strong> We began with a collection of documents: the Job Description, organizational context from the careers website, the formal interview invitation, and our email correspondence regarding reasonable adjustments.</p>
+                                    <p><strong class="text-slate-700">Why:</strong> The initial analysis revealed a critical contradiction. The Job Description detailed a highly technical, executional developer role. However, your past interview experience with another force involved very high-level, strategic questions. This created ambiguity about the true nature of the upcoming interview.</p>
+                                    <p><strong class="text-slate-700">The Problem:</strong> We needed to resolve this conflict to create an accurate preparation strategy. Relying on the wrong assumption would lead to preparing for the wrong interview.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="accordion-item border-t border-slate-200 pt-4">
+                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
+                                <span class="font-semibold text-lg text-slate-700">II. The Breakthrough: Identifying the Framework</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="pt-4 space-y-4 text-slate-600 prose">
+                                    <p><strong class="text-slate-700">What:</strong> A critical piece of intelligence was located: the "Interview Preparation Guidance" PDF linked in the invitation. This document explicitly stated the interview would be <strong class="text-slate-800">competency-based</strong> and referenced the College of Policing's Competency and Values Framework (CVF).</p>
+                                    <p><strong class="text-slate-700">Why:</strong> This was the breakthrough. It provided the formal assessment framework the interviewers would be using. It superseded any assumptions based on past experience and gave us a clear, evidence-based direction for our analysis.</p>
+                                    <p><strong class="text-slate-700">The Shift:</strong> Our focus shifted from broad speculation to a targeted analysis of how the specific competencies in the CVF would be applied to test for the skills listed in the RPA Developer job description.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-t border-slate-200 pt-4">
+                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
+                                <span class="font-semibold text-lg text-slate-700">III. The Deep Dive: Profiling the Decision-Makers</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="pt-4 space-y-4 text-slate-600 prose">
+                                    <p><strong class="text-slate-700">Who:</strong> Further intelligence gathering provided detailed professional profiles for the two interviewers: Taras Litowczuk and Sharon Adkin.</p>
+                                    <p><strong class="text-slate-700">Why:</strong> This was the final layer of critical detail. The analysis revealed they were not a homogenous panel but represented a duality of interests:</p>
+                                    <ul class="list-disc pl-5">
+                                        <li><strong class="text-slate-800">Taras Litowczuk: The Technical Architect.</strong> Focused on technical excellence, security, architecture, and the Microsoft Power Platform. He represents the "how."</li>
+                                        <li><strong class="text-slate-800">Sharon Adkin: The Business Strategist.</strong> Focused on business value, ROI, resource management, and filling the "skills gap." She represents the "why."</li>
+                                    </ul>
+                                    <p><strong class="text-slate-700">The Insight:</strong> We concluded the interview would be a test of our ability to satisfy both stakeholders simultaneously. This was not a generic competency interview; it was a highly specific assessment against two distinct but complementary sets of priorities.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-t border-slate-200 pt-4">
+                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
+                                <span class="font-semibold text-lg text-slate-700">IV. Synthesis: Building the Final Strategy</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
+                            </button>
+                             <div class="accordion-content">
+                                <div class="pt-4 space-y-4 text-slate-600 prose">
+                                    <p><strong class="text-slate-700">What:</strong> All prior analysis was synthesized into the final, multi-layered interactive tool you are now using.</p>
+                                    <p><strong class="text-slate-700">How:</strong> The generic question framework was discarded and rewritten. The application was re-architected to reflect the true nature of the interview. The structure was designed to allow you to prepare for each interviewer's likely questions and core competencies separately.</p>
+                                    <p><strong class="text-slate-700">The Outcome:</strong> The result is a highly targeted, evidence-based preparation tool. It moves beyond generic advice and provides a clear, actionable framework for navigating the specific strategic landscape of this interview, addressing the known priorities of the key decision-makers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Briefing Content -->
+                <div id="briefing" class="tab-content hidden">
+                    <div class="mb-6">
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Intelligence Analysis of the Interview Landscape</h2>
+                        <p class="text-slate-600">This section provides a comprehensive strategic analysis of the upcoming interview. Use this intelligence to understand the context, the key stakeholders, and the underlying objectives of the assessment process.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="accordion-item border-t border-slate-200 pt-4">
+                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
+                                <span class="font-semibold text-lg text-slate-700">I. Executive Summary: The Interview Dynamic</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="pt-4 space-y-3 text-slate-600 prose">
+                                    <p>The interview is a multi-faceted evaluation of your ability to operate at the intersection of deep technical implementation and pragmatic business strategy. The panel, comprising Taras Litowczuk and Sharon Adkin, represents a critical duality. You must demonstrate fluency in the languages of both the technical architect and the business stakeholder.</p>
+                                    <p>The core dynamic is a synthesis of two priorities: Taras Litowczuk, as Lead Developer, embodies the technical vision (<strong class="text-slate-800">how</strong> to innovate securely), while Sharon Adkin, as Business Lead, represents pragmatic business value (<strong class="text-slate-800">why</strong> the organization should innovate).</p>
+                                    <p>This role was created to fill a recognized <strong class="text-slate-800">"skills gap"</strong> and internalize automation capabilities. You must position yourself as a comprehensive solution provider who can build robust, secure solutions that satisfy technical standards, while also delivering quantifiable efficiency gains and operational value that align with the public sector mission.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="accordion-item border-t border-slate-200 pt-4">
+                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
+                                <span class="font-semibold text-lg text-slate-700">II. Dossier: Taras Litowczuk, The Technical Architect</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="pt-4 space-y-4 text-slate-600 prose">
+                                    <h4 class="font-semibold text-slate-700">A. Professional Trajectory: From User Support to Digital Innovator</h4>
+                                    <p>His career path from front-line technical support to Lead Developer provides him with an intimate, first-hand knowledge of the user pain points he now seeks to eliminate. His focus on <strong class="text-slate-800">"user-centered"</strong> solutions is a core principle forged through direct experience. Frame your technical examples through a user-centric lens, articulating how stakeholder engagement and intuitive design solved a tangible problem for the end-user.</p>
+                                    <h4 class="font-semibold text-slate-700">B. The Technical Ecosystem: The Microsoft Powerhouse</h4>
+                                    <p>The environment is centered on the Microsoft stack. He is a Subject Matter Expert in <strong class="text-slate-800">Azure, Dynamics 365, and the Power Platform</strong>, with a 90% proficiency in Power Automate. This is the single most significant technical data point. The interview will be a test of specialized, platform-specific knowledge. Deep, demonstrable expertise in Power Automate (cloud and desktop flows), Dataverse, SharePoint, and supporting Azure services is paramount.</p>
+                                    <h4 class="font-semibold text-slate-700">C. Leadership Philosophy: Driving Transformation</h4>
+                                    <p>He leads a cross-functional team and is maturing the development practice by establishing best practices, coding standards, and <strong class="text-slate-800">Application Lifecycle Management (ALM)</strong>. His philosophy is built on a foundation of security, emphasizing a <strong class="text-slate-800">"data-first model."</strong> You must present yourself as a professional developer, not just a coder. This involves discussing source control (Git), deployment pipelines (CI/CD), clean code, robust error handling, secure credential management (Azure Key Vault), and comprehensive logging.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-t border-slate-200 pt-4">
+                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
+                                <span class="font-semibold text-lg text-slate-700">III. Dossier: Sharon Adkin, The Business Strategist</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="pt-4 space-y-4 text-slate-600 prose">
+                                    <h4 class="font-semibold text-slate-700">A. Role Analysis: Bridge Between Business Need and IT Solution</h4>
+                                    <p>Her progression from Project Manager to <strong class="text-slate-800">Business Lead</strong> signifies a shift from tactical delivery to strategic alignment. She is the voice of the "internal customer" and the steward of public funds. Any technical discussion must be framed in the language of business value. Be prepared to answer the "so what?" question for every technical capability. Structure your answers as concise business cases.</p>
+                                    <h4 class="font-semibold text-slate-700">B. Key Priorities: Value, Resources, and Capability Gaps</h4>
+                                    <p>A key data point is her focus on using contractors to fill an <strong class="text-slate-800">"internal skills gap"</strong> while "locking in the day rate." The decision to hire a permanent developer is the strategic evolution of this process. This role exists to provide a better long-term investment than external contractors. You must position yourself as the strategic solution: a long-term asset who can build a sustainable, in-house automation capability, create reusable components, and contribute to a center of excellence model.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-t border-slate-200 pt-4">
+                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
+                                <span class="font-semibold text-lg text-slate-700">IV. Organizational Imperative: Digital Transformation in Policing</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
+                            </button>
+                             <div class="accordion-content">
+                                <div class="pt-4 space-y-4 text-slate-600 prose">
+                                    <p>Every technology initiative must serve the core mission of "reducing and investigating crime, protecting people and promoting law and order." The Constabulary's values emphasize a <strong class="text-slate-800">"people first"</strong> culture and a robust Health and Wellbeing Strategy.</p>
+                                    <p>In this context, automation must be framed as a mechanism for <strong class="text-slate-800">empowerment</strong>, not workforce reduction. The primary goal is to free up highly trained officers and staff from repetitive administrative tasks, allowing them to focus on core policing duties. Your ability to connect your work directly to key performance metrics like <strong class="text-slate-800">"Preventing crime," "Protecting vulnerable people,"</strong> and <strong class="text-slate-800">"Good use of resources"</strong> will be immensely powerful.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taras Litowczuk Content -->
+                <div id="litowczuk" class="tab-content hidden">
+                    <div class="mb-6">
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Assessing the Technical Architect: Taras Litowczuk</h2>
+                        <p class="text-slate-600">These questions test your technical depth, architectural mindset, and alignment with a user-centered, security-first development philosophy within the Microsoft ecosystem. The goal is to prove you are a professional developer who can build secure, scalable, and maintainable solutions.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="accordion-item border-t border-slate-200 pt-4">
+                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
+                                <span class="font-semibold text-lg text-slate-700">Competency: Technical Architecture & Microsoft Ecosystem</span>
                                 <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
@@ -84,44 +210,52 @@
                                     <li>Describe your most complex automation built using Power Automate, detailing your use of both cloud flows and desktop flows.</li>
                                     <li>Explain how you have used Dataverse as a secure and scalable backend for a Power App or automation.</li>
                                     <li>Tell us about a time you built a solution that deeply integrated Power Automate and SharePoint Online for document management.</li>
-                                    <li>Describe a complex problem you solved using PowerShell. How did it interact with other M356 or Azure services?</li>
+                                    <li>Describe a complex problem you solved using PowerShell. How did it interact with other M365 or Azure services?</li>
                                     <li>How do you decide when to use a Power Automate cloud flow versus a desktop flow? What are the architectural trade-offs?</li>
                                     <li>What is your experience with Power Platform ALM and using solutions to move components between environments? Why is this critical?</li>
                                     <li>How have you used or would you use AI Builder to create more intelligent automations?</li>
                                     <li>What is your experience with version control systems like Azure DevOps or Git in the context of Power Platform development?</li>
                                     <li>How would you approach debugging a complex cloud flow that is failing intermittently, using the tools available within the Power Platform?</li>
+                                    <li>What area of the Power Platform or Azure are you currently seeking to develop, and what steps are you taking to do so?</li>
                                 </ul>
                             </div>
                         </div>
                          <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Information Security & Compliance</span>
+                                <span class="font-semibold text-lg text-slate-700">Competency: Security, Governance & Operational Integrity</span>
                                 <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
                                     <li>How would you design an audit trail for a solution that updates records in Dataverse for legal defensibility?</li>
                                     <li>Describe your experience implementing security roles in Dataverse to enforce role-based access control.</li>
-                                    <li>What is your preferred method for securing credentials and API keys for a Power Automate flow, referencing Azure Key Vault or similar?</li>
+                                    <li>What is your preferred method for securing credentials and API keys for a Power Automate flow, referencing Azure Key Vault?</li>
                                     <li>Imagine you discover an existing cloud flow that stores a password in plain text. What are your immediate actions?</li>
                                     <li>How do you ensure security is maintained throughout the entire Power Platform ALM?</li>
                                     <li>Explain the role of Azure Active Directory and service principals in authentication for a solution using a custom connector.</li>
+                                    <li>Describe your experience deploying a Power Platform solution into a 24/7 live environment. How did you use solutions management to minimize disruption?</li>
+                                    <li>What is your strategy for testing a Power Automate desktop flow to ensure it is robust enough for a mission-critical environment?</li>
+                                    <li>How would you design a cloud flow to handle unexpected system errors, network timeouts, or API throttling gracefully?</li>
+                                    <li>Explain the importance of maintainability when building cloud flows and how this reduces technical debt.</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Operational Integrity & ALM</span>
+                                <span class="font-semibold text-lg text-slate-700">Competency: User-Centric Design & Collaboration</span>
                                 <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Describe your experience deploying a Power Platform solution into a 24/7 live environment. How did you use solutions management to minimize disruption?</li>
-                                    <li>Tell us about a time a critical Power Automate flow failed. Walk us through your troubleshooting and communication process.</li>
-                                    <li>What is your strategy for testing a Power Automate desktop flow to ensure it is robust enough for a mission-critical environment?</li>
-                                    <li>How would you design a cloud flow to handle unexpected system errors, network timeouts, or API throttling gracefully?</li>
-                                    <li>Explain the importance of maintainability when building cloud flows and how this reduces technical debt.</li>
-                                    <li>What steps would you take before deploying an update to a Power App or flow in a live environment?</li>
+                                    <li>His philosophy is "user-centered." How do you ensure the solutions you build solve a tangible problem for the people using them?</li>
+                                    <li>How do you explain technical concepts like API limitations to a non-technical audience?</li>
+                                    <li>What is your approach to User Acceptance Testing (UAT) for a Power App or automation?</li>
+                                    <li>Tell us about a time a critical Power Automate flow failed. Walk us through your troubleshooting and your communication process with stakeholders.</li>
+                                    <li>Describe your approach to creating documentation for a complex Power Platform solution.</li>
+                                    <li>How do you approach receiving constructive criticism on your work from a Lead Developer?</li>
+                                    <li>The Microsoft ecosystem changes rapidly. How do you adapt to new features, processes, and ways of working?</li>
+                                    <li>Describe your ideal team working environment and the role you typically play.</li>
+                                    <li>Tell us about a time you had a professional disagreement with a technical colleague. How did you resolve it?</li>
                                 </ul>
                             </div>
                         </div>
@@ -131,13 +265,13 @@
                 <!-- Sharon Adkin Content -->
                 <div id="adkin" class="tab-content hidden">
                     <div class="mb-6">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Questions from the Business Strategist</h2>
-                        <p class="text-slate-600">These questions assess your understanding of business value, strategic alignment, and your ability to function as a long-term asset. The goal is to prove you understand the "why" behind the technology and can deliver a tangible return on investment.</p>
+                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Assessing the Business Strategist: Sharon Adkin</h2>
+                        <p class="text-slate-600">These questions assess your understanding of business value, strategic alignment, and your ability to function as a long-term asset. The goal is to prove you understand the "why" behind the technology and can deliver tangible return on investment for the public service mission.</p>
                     </div>
                      <div class="space-y-4">
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Business Value & ROI</span>
+                                <span class="font-semibold text-lg text-slate-700">Competency: Business Value & Return on Investment</span>
                                 <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
@@ -148,123 +282,48 @@
                                     <li>This role exists to fill a "skills gap." How do you see yourself delivering more value than an external contractor?</li>
                                     <li>How can automation directly support the force's key performance objective of "Good use of resources"?</li>
                                     <li>Walk us through how you would ensure an automation project delivers its promised benefits after deployment.</li>
+                                    <li>Describe a decision you had to make that balanced project deadlines against the need for additional hardening. How would you rationalize the decision to a business stakeholder?</li>
+                                    <li>How would you explain the business risk of using a single, generic user account for a desktop flow, beyond the technical reasons?</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="accordion-item border-t border-slate-200 pt-4">
                             <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Stakeholder Engagement & User-Centric Design</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
-                            </button>
-                            <div class="accordion-content">
-                                <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Taras Litowczuk's philosophy is "user-centered." How do you ensure the solutions you build solve a tangible problem for the people using them?</li>
-                                    <li>How do you explain technical limitations to a non-technical manager who needs a solution urgently?</li>
-                                    <li>Tell us about a situation where project requirements changed. How did you adapt and manage stakeholder expectations?</li>
-                                    <li>What is your approach to User Acceptance Testing to ensure the business is happy with the final product?</li>
-                                    <li>You are demonstrating a new automation and the team is resistant to change. What steps would you take to gain their buy-in?</li>
-                                    <li>What is your philosophy on providing support and documentation to empower users and build an internal capability?</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-t border-slate-200 pt-4">
-                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Strategic Alignment & Filling the Skills Gap</span>
+                                <span class="font-semibold text-lg text-slate-700">Competency: Strategic Alignment & Public Service Mission</span>
                                 <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
                             </button>
                             <div class="accordion-content">
                                 <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
                                     <li>What is your motivation for a public sector role within the police, as opposed to a private sector role?</li>
                                     <li>How do you see this role contributing to the Constabulary's Health and Wellbeing Strategy by reducing administrative burden?</li>
+                                    <li>How would you ensure your work consistently reflects the values of fairness, transparency, and public service?</li>
+                                    <li>What does the value of 'integrity' mean to you in a professional context?</li>
+                                    <li>Describe your understanding of the importance of public trust in policing. How can this role support it?</li>
+                                    <li>Beyond cybersecurity, what other risks (operational, reputational, ethical) should be considered when automating police processes?</li>
+                                    <li>When assessing a process, how do you evaluate the risk of losing valuable human oversight or judgement?</li>
+                                    <li>What are your long-term career aspirations, and how does this role fit into that vision?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-t border-slate-200 pt-4">
+                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
+                                <span class="font-semibold text-lg text-slate-700">Competency: Stakeholder Management & Building Capability</span>
+                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
+                                    <li>Tell us about a situation where project requirements changed. How did you adapt and manage stakeholder expectations?</li>
+                                    <li>You are demonstrating a new automation and the team is resistant to change. What steps would you take to gain their buy-in?</li>
+                                    <li>What is your philosophy on providing support and documentation to empower users and build an internal capability?</li>
                                     <li>How would you approach mentoring other team members to help build a sustainable, in-house automation capability?</li>
                                     <li>If tasked with helping to establish a Power Platform 'Center of Excellence', what would be the key pillars of your strategy from a business perspective?</li>
-                                    <li>How do you ensure your work consistently reflects the values of fairness, transparency, and public service?</li>
+                                    <li>How do you ensure effective communication on a project involving multiple specialisms and non-technical stakeholders?</li>
+                                    <li>Describe a time you faced a significant setback in a project. What did you learn from the experience?</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Synthesis Content -->
-                <div id="synthesis" class="tab-content hidden">
-                    <div class="mb-6">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Synthesis & Scenario Questions</h2>
-                        <p class="text-slate-600">These questions test your ability to synthesize the technical and business perspectives. They assess your judgement and ability to navigate the inherent tensions between Mr. Litowczuk's technical mandate and Ms. Adkin's business objectives.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="accordion-item border-t border-slate-200 pt-4">
-                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Navigating Conflicting Priorities</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
-                            </button>
-                            <div class="accordion-content">
-                                <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Sharon Adkin is pushing for a rapid deployment to meet an urgent need, but you believe Taras Litowczuk's standards for security testing have not been met. Describe the steps you would take.</li>
-                                    <li>A user requests a flow that emails them a report with sensitive data. How would you explain to them, and potentially to Ms. Adkin, why this is a risk, while also proposing an alternative solution that meets their underlying business need?</li>
-                                    <li>A business team wants to use a single, generic user account for a desktop flow for simplicity. How would you explain the technical risks to Mr. Litowczuk and the business risks to Ms. Adkin?</li>
-                                    <li>Describe a decision you had to make that balanced project deadlines against the need for additional security hardening. How did you rationalize the decision to both technical and business stakeholders?</li>
-                                    <li>A user story requires caching data in a SharePoint list for faster Power App performance, but security protocols forbid it. How do you resolve this technical and procedural conflict, satisfying both sides?</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-t border-slate-200 pt-4">
-                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Strategic Risk Assessment</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
-                            </button>
-                            <div class="accordion-content">
-                                <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Beyond cybersecurity threats, what other risks (operational, reputational, ethical) should be considered when automating processes within a police force?</li>
-                                    <li>Consider automating a process for redacting sensitive information from documents. What are the primary risks, and how could a Power Platform solution be designed to mitigate them?</li>
-                                    <li>How could the automation of data entry potentially introduce unforeseen biases into a dataset? How might you guard against this from both a technical and business process perspective?</li>
-                                    <li>Describe how over-reliance on a single, complex cloud flow could create a new single point of failure. How would you explain this risk to Ms. Adkin?</li>
-                                    <li>When assessing a process for automation, how do you evaluate the risk of losing the valuable human oversight that was part of the manual process?</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Alignment Content -->
-                <div id="alignment" class="tab-content hidden">
-                    <div class="mb-6">
-                        <h2 class="text-xl sm:text-2xl font-bold mb-2 text-slate-800">Organizational Alignment & Values</h2>
-                        <p class="text-slate-600">This final section assesses your alignment with the specific values and mission of Derbyshire Constabulary. It explores your professional motivations, your approach to teamwork, and your commitment to personal development.</p>
-                    </div>
-                     <div class="space-y-4">
-                        <div class="accordion-item border-t border-slate-200 pt-4">
-                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Motivation & Teamwork</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
-                            </button>
-                            <div class="accordion-content">
-                                <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>What does the value of 'integrity' mean to you in a professional context?</li>
-                                    <li>Describe your ideal team working environment. What role do you typically play in a team?</li>
-                                    <li>Tell us about a time you had a professional disagreement with a colleague. How did you resolve it?</li>
-                                    <li>How do you ensure effective communication on a project that involves multiple specialisms like data science and cloud engineering?</li>
-                                    <li>Provide an example of a time when you contributed to the success of a team, even when it was outside of your direct responsibilities.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="accordion-item border-t border-slate-200 pt-4">
-                            <button class="accordion-header w-full flex justify-between items-center text-left py-2">
-                                <span class="font-semibold text-lg text-slate-700">Adaptability & Professional Development</span>
-                                <span class="accordion-icon text-slate-500 text-2xl font-thin">&#x276F;</span>
-                            </button>
-                            <div class="accordion-content">
-                                <ul class="list-disc pl-6 pt-4 space-y-3 text-slate-600">
-                                    <li>Describe a time you faced a significant setback or failure in a project. What did you learn from the experience?</li>
-                                    <li>How do you approach receiving constructive criticism or feedback on your work from a Lead Developer?</li>
-                                    <li>What area of the Power Platform or Azure are you currently seeking to develop, and what steps are you taking to do so?</li>
-                                    <li>The Microsoft ecosystem changes rapidly. How do you adapt to new features, processes, and ways of working?</li>
-                                    <li>What are your long-term career aspirations, and how does this role at Derbyshire Constabulary fit into that vision?</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </main>
 
